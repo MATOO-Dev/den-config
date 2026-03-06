@@ -15,7 +15,7 @@
 
 		# general user config
 		user = { pkgs, ... }: {
-			packages = with pkgs; [ kitty alacritty ];
+			packages = with pkgs; [ alacritty git ];
 			description = "MATOO";
 			extraGroups = [ ];
 			# only used once right after installing

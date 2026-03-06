@@ -15,7 +15,7 @@
 
 		# general user config
 		user = { pkgs, ... }: {
-			packages = [];
+			packages = with pkgs; [ kitty ];
 			description = "MATOO";
 			extraGroups = [ ];
 			# only used once right after installing

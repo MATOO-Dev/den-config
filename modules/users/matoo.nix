@@ -11,6 +11,8 @@
 			(den.provides.user-shell "zsh")
 			# custom aspects
 			den.aspects.git
+			den.aspects.kitty
+			den.aspects.niri
 		];
 
 		# general user config
@@ -33,6 +35,7 @@
 				stateVersion = "25.11";
 
 				packages = with pkgs; [
+					kitty
 					alacritty
 					git
 				];

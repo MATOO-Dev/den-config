@@ -1,5 +1,5 @@
 {
-	den.aspects.git.home = {
+	den.aspects.git.homeManager = {
 		programs.git = {
 			enable = true;
 

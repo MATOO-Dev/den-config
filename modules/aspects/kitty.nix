@@ -1,5 +1,5 @@
 {
-	den.aspects.kitty.home = { ... }: {
+	den.aspects.kitty.homeManager = { ... }: {
 		programs.kitty = {
 			enable = true;
 

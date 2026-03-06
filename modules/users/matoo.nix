@@ -11,6 +11,7 @@
 			(den.provides.user-shell "zsh")
 			# custom aspects
 			den.aspects.git
+			den.aspects.hyprland
 			den.aspects.kitty
 			den.aspects.niri
 		];

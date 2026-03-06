@@ -15,7 +15,6 @@
 
 		# general user config
 		user = { pkgs, ... }: {
-			packages = with pkgs; [ alacritty git ];
 			description = "MATOO";
 			extraGroups = [ ];
 			# only used once right after installing
@@ -32,6 +31,11 @@
 				username = "matoo";
 				homeDirectory = "/home/matoo";
 				stateVersion = "25.11";
+
+				packages = with pkgs; [
+					alacritty
+					git
+				];
 			};
 
 			# mute home manager news

@@ -14,6 +14,7 @@
 		# config architecture
 		# allfollow.url = "github:spikespaz/allfollow";
 		den.url = "github:vic/den";
+		flake-aspects.url = "github:vic/flake-aspects";
 		flake-parts.url = "github:hercules-ci/flake-parts";
 		import-tree.url = "github:vic/import-tree";
 

@@ -1,10 +1,10 @@
 { den, inputs, ... }:
 {
 	# define vm config aspect + user aspect
-	den.hosts.x86_64-linux.vm.users.matoo = {};
+	den.hosts.x86_64-linux.matoo-vm.users.matoo = {};
 
 	# configure vm config aspect
-	den.aspects.vm = {
+	den.aspects.matoo-vm = {
 		# re-usable modules here
 		includes = [
 		];

@@ -1,6 +1,6 @@
 { inputs, ... }: 
 {
-    den.aspects.vm.nixos = {
+    den.aspects.matoo-vm.nixos = {
 		imports = [
 			inputs.disko.nixosModules.default
 		];

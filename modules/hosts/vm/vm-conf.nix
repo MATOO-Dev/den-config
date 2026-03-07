@@ -33,7 +33,7 @@
 		# system settings
 		nixos = { pkgs, ... }:
 		{
-			networking.hostName = "vm";
+			networking.hostName = "matoo-vm";
 			environment.systemPackages = with pkgs; [ vim ];
 			system.stateVersion = "25.11";
 

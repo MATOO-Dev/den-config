@@ -27,12 +27,7 @@
 				den.aspects.virtualization
 
 				# hardware
-				# self.nixosModules.vm-general
-				# self.nixosModules.vm-hardware
-				# inputs.disko.nixosModules.disko
-				# disk is already configured through shared namespace
-				# self.diskoConfigurations.matoo-vm
-				# den.aspects.vm
+				den.aspects.vm-disk
 		];
 
 		# system settings

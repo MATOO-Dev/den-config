@@ -1,6 +1,6 @@
 { inputs, ... }:
 let
-	primary_disk_path = "/dev/by-id/ata-QEMU_DVD-ROM_QM00005";
+	primary_disk_path = "";
 	mount_options = [
 		"compress=zstd:3" # automatic file compression if possible
 		"discard=async" # stagger discards to improve i/o
@@ -10,7 +10,7 @@ let
 	];
 in
 {
-	den.aspects.vm-disk.nixos = { ... }: {
+	den.aspects.laptop-disk.nixos = { ... }: {
 		imports = [
 			inputs.disko.nixosModules.default
 		];
@@ -20,8 +20,6 @@ in
             disk = {
                 primary = {
                     type = "disk";
-					# fix for out of space error that happens only in VMs
-					imageSize = "10G";
                     device = primary_disk_path;
                     content = {
                         type = "gpt";

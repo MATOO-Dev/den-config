@@ -1,6 +1,7 @@
 # abbreviations
 disko=github:nix-community/disko/latest#disko-install
-experimental=--extra-experimental-features "nix-command flakes"
+experimental=--extra-experimental-features
+extras="\"nix-command flakes\""
 options=--write-efi-boot-entries
 
 # fixes 'no space left on device' during install

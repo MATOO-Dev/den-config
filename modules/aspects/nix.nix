@@ -14,7 +14,7 @@
 			enable = true;
 			clean.enable = true;
 			clean.extraArgs = "--keep 5 --keep-since 7d";
-			flake = ./../../flake.nix;
+			flake = "/home/matoo/den-config";
 		};
 
 		# automatic updates

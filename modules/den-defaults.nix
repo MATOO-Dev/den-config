@@ -2,7 +2,7 @@
 {
 	imports = [ inputs.den.flakeModule ];
 
-	den.base = {
+	den.schema = {
 		host.home-manager.enable = true;
 	};
 

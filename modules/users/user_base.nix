@@ -1,6 +1,6 @@
 { den, ... }:
 {
-	den.base.user = { user, lib, ... }:
+	den.schema.user = { user, lib, ... }:
 	{
 		# default classes for all users
 		config.classes = lib.mkDefault [ 

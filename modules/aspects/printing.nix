@@ -18,7 +18,7 @@
 		};
 	};
 
-	den.base.user = { lib, ... }:
+	den.schema.user = { lib, ... }:
 	{
 		# default groups for all users
 		config.classes = lib.mkDefault [ 

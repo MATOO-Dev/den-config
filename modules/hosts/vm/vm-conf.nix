@@ -8,7 +8,7 @@
 		# re-usable modules here
 		includes = [
 				# general
-				# defined through den.base.user
+				# defined through den.schema.user
 				# self.nixosModules.matoo
 
 				# system

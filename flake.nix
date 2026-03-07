@@ -15,13 +15,9 @@
 		# config architecture
 		# allfollow.url = "github:spikespaz/allfollow";
 		den.url = "github:vic/den";
-		den.inputs.nixpkgs.follows = "nixpkgs";
 		flake-aspects.url = "github:vic/flake-aspects";
-		flake-aspects.inputs.nixpkgs.follows = "nixpkgs";
 		flake-parts.url = "github:hercules-ci/flake-parts";
-		flake-parts.inputs.nixpkgs.follows = "nixpkgs";
 		import-tree.url = "github:vic/import-tree";
-		import-tree.inputs.nixpkgs.follows = "nixpkgs";
 
 		# hardware
 		disko.url = "github:nix-community/disko";

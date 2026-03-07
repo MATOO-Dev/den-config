@@ -1,6 +1,6 @@
 { inputs, ... }:
 let
-	primary_disk_path = "/dev/by-id/ata-QEMU_DVD-ROM_QM00005";
+	primary_disk_path = "/dev/vda";
 	mount_options = [
 		"compress=zstd:3" # automatic file compression if possible
 		"discard=async" # stagger discards to improve i/o

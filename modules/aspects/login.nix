@@ -2,7 +2,7 @@
 	den.aspects.login.nixos = { pkgs, lib, ... }: {
 		services.displayManager.ly.enable = false;
 
-		services.greetd = lib.mkDefault {
+		services.greetd = lib.mkForce {
 			enable = true;
 			settings.default_session = 
 			{

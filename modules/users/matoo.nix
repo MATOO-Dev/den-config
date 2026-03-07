@@ -1,12 +1,12 @@
 { den, ... }:
 {
+	# define home aspect
+	den.homes.x86_64-linux.matoo = {};
+
+	# configure home aspect
 	den.aspects.matoo = {
 		# modules for this user
 		includes = [
-			# set username for nixos and home manager
-			den.provides.define-user
-			# add admin groups and set isnormaluser
-			den.provides.primary-user
 			# set user shell for nixos and home manager
 			(den.provides.user-shell "zsh")
 			# custom aspects
@@ -18,8 +18,12 @@
 
 		# general user config
 		user = { pkgs, ... }: {
+			isNormalUser = true;
 			description = "MATOO";
-			extraGroups = [ ];
+			extraGroups = [ 
+				"wheel"
+				"networkmanager"
+			];
 			# only used once right after installing
 			# don't forget to set password after installing
 			initialPassword = "12345";
@@ -37,7 +41,6 @@
 
 				packages = with pkgs; [
 					kitty
-					alacritty
 					git
 				];
 			};

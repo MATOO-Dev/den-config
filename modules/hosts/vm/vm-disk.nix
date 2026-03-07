@@ -21,7 +21,7 @@ in
                 primary = {
                     type = "disk";
 					# fix for out of space error that happens only in VMs
-					imageSize = "10G";
+					imageSize = "25G";
                     device = primary_disk_path;
                     content = {
                         type = "gpt";

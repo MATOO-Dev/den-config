@@ -7,12 +7,6 @@
 	den.aspects.matoo-vm = {
 		# re-usable modules here
 		includes = [
-		];
-
-		# system settings
-		nixos = { pkgs, ... }:
-		{
-			includes = [
 				# general
 				# defined through den.base.user
 				# self.nixosModules.matoo
@@ -39,8 +33,11 @@
 				# disk is already configured through shared namespace
 				# self.diskoConfigurations.matoo-vm
 				# den.aspects.vm
-			];
+		];
 
+		# system settings
+		nixos = { pkgs, ... }:
+		{
 			networking.hostName = "vm";
 			environment.systemPackages = with pkgs; [ vim ];
 			system.stateVersion = "25.11";

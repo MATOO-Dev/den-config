@@ -4,8 +4,9 @@
 
 		services.greetd = lib.mkDefault {
 			enable = true;
-			settings = {
-				default_session = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd niri";
+			settings.default_session = 
+			{
+				command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd niri-session";
 				user = "matoo";
 			};
 		};

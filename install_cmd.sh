@@ -1,7 +1,3 @@
-# fixes 'no space left on device' during install
-# export TMPDIR=/mnt/flake/tmp
-
-# install desktop
 sudo nix run \
 	github:nix-community/disko/latest#disko-install \
 	--extra-experimental-features "nix-command flakes" \

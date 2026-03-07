@@ -12,18 +12,18 @@
 				# self.nixosModules.matoo
 
 				# system
-				# den.aspects.audio
-				# den.aspects.bluetooth
+				den.aspects.audio
+				den.aspects.bluetooth
 				den.aspects.bootloader
-				# den.aspects.fonts
-				# den.aspects.input
+				den.aspects.fonts
+				den.aspects.input
 				# den.aspects.kernel
 				den.aspects.locale
-				# den.aspects.login
+				den.aspects.login
 				den.aspects.networking
-				# den.aspects.niri
+				den.aspects.niri
 				den.aspects.nix
-				# den.aspects.printing
+				den.aspects.printing
 				den.aspects.virtualization
 
 				# hardware

@@ -1,9 +1,11 @@
 {
-	den.aspects.printing.nixos = { pkgs, user, ... }: {
+	den.aspects.printing.nixos = { pkgs, ... }: {
 		# enable CUPS to print documents
 		services.printing = {
 			enable = true;
-			drivers = with pkgs; [ hplip ];
+			drivers = with pkgs; [
+				hplip
+			];
 		};
 
 		# is this line needed if i already defined it above?
@@ -14,11 +16,27 @@
 		# enable scanning
 		hardware.sane = {
 			enable = true;
-			extraBackends = [ pkgs.hplipWithPlugin pkgs.sane-airscan ];
+			extraBackends = with pkgs; [
+				hplipWithPlugin
+				sane-airscan
+			];
 		};
 
-		# add these groups to all users importing this module
-		users.users.${user.userName}.extraGroups = [
+		# # add these groups to all users importing this module
+		# # doesnt work apparently
+		# users.users.${user.userName}.extraGroups = [
+		# 	"lp" # printing
+		# 	"scanner" # scanning
+		# ];
+		#
+		# # using this also doesnt work
+		# users.users.matoo.extraGroups = [
+		#
+		# ];
+	};
+
+	den.default.user = {
+		extraGroups = [
 			"lp" # printing
 			"scanner" # scanning
 		];

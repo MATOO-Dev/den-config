@@ -18,10 +18,10 @@
 		};
 	};
 
-	den.schema.user = { lib, ... }:
+	den.schema.user = { ... }:
 	{
 		# default groups for all users
-		config.classes = lib.mkDefault [ 
+		extraGroups = [ 
 			"lp" # printing
 			"scanner" # scanning
 		];

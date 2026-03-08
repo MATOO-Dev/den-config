@@ -18,8 +18,7 @@
 		};
 	};
 
-	den.schema.user = { ... }:
-	{
+	den.default.users = {
 		# default groups for all users
 		extraGroups = [ 
 			"lp" # printing

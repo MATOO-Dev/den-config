@@ -1,5 +1,5 @@
 {
-	den.aspects.printing.nixos = { pkgs, ... }: {
+	den.aspects.printing.nixos = { pkgs, user, ... }: {
 		# enable CUPS to print documents
 		services.printing = {
 			enable = true;
@@ -16,11 +16,9 @@
 			enable = true;
 			extraBackends = [ pkgs.hplipWithPlugin pkgs.sane-airscan ];
 		};
-	};
 
-	den.default.users = {
-		# default groups for all users
-		extraGroups = [ 
+		# add these groups to all users importing this module
+		users.users.${user.userName}.extraGroups = [
 			"lp" # printing
 			"scanner" # scanning
 		];

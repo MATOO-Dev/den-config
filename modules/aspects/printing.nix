@@ -1,7 +1,6 @@
-{den, ...}: 
 {
-	den.aspects.printing = {pkgs, user, ...}: den.lib.parametric {
-		nixos = { ... }: {
+	den.aspects.printing = { user, ... }: {
+		nixos = { pkgs, ... }: {
 			# enable CUPS to print documents
 			services.printing = {
 				enable = true;

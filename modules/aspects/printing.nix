@@ -1,5 +1,5 @@
 {
-	den.aspects.printing.nixos = { pkgs, ... }: {
+	den.aspects.printing.nixos = { pkgs, user, ... }: {
 		# enable CUPS to print documents
 		services.printing = {
 			enable = true;
@@ -22,21 +22,7 @@
 			];
 		};
 
-		# # add these groups to all users importing this module
-		# # doesnt work apparently
-		# users.users.${user.userName}.extraGroups = [
-		# 	"lp" # printing
-		# 	"scanner" # scanning
-		# ];
-		#
-		# # using this also doesnt work
-		# users.users.matoo.extraGroups = [
-		#
-		# ];
-	};
-
-	den.default.user = {
-		extraGroups = [
+		users.users.${user.userName}.extraGroups = [
 			"lp" # printing
 			"scanner" # scanning
 		];

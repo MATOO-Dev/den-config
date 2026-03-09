@@ -23,13 +23,10 @@
 				];
 			};
 
+			# add these groups to all users on all hosts importing this aspect
 			users.users.${user.userName}.extraGroups = [
 				"lp" # printing
 				"scanner" # scanning
-			];
-
-			environment.systemPackages = with pkgs; [
-				neofetch
 			];
 		};
 	};

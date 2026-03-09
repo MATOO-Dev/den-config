@@ -1,5 +1,6 @@
+{den, ...}: 
 {
-	den.aspects.printing = {pkgs, user, ...}: {
+	den.aspects.printing = {pkgs, user, ...}: den.lib.parametric {
 		nixos = { ... }: {
 			# enable CUPS to print documents
 			services.printing = {
@@ -26,6 +27,10 @@
 			users.users.${user.userName}.extraGroups = [
 				"lp" # printing
 				"scanner" # scanning
+			];
+
+			environment.systemPackages = with pkgs; [
+				neofetch
 			];
 		};
 	};

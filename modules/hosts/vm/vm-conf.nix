@@ -1,4 +1,4 @@
-{ den, inputs, ... }:
+{ den, ... }:
 {
 	# define vm config aspect + user aspect
 	den.hosts.x86_64-linux.matoo-vm.users.matoo = {};
@@ -8,7 +8,7 @@
 		# re-usable modules here
 		includes = [
 			# general
-			# defined through den.schema.user
+			# below now defined through den.schema.user and den.aspects.matoo
 			# self.nixosModules.matoo
 
 			# system

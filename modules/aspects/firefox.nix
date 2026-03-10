@@ -1,6 +1,6 @@
 {
 	den.aspects.firefox.nixos ={
-		environment.sessionVariables.MOX_ENABLE_WAYLAND = true; # or "1"
+		environment.sessionVariables.MOX_ENABLE_WAYLAND = 1;
 	};
 
 	den.aspects.firefox.homeManager = { ... }: {

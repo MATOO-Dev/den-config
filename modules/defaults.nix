@@ -11,13 +11,13 @@
 		homeManager.home.stateVersion = "25.11";
 
 		user = {
-			includes = [
+			imports = [
 
 			];
 		};
 
 		nixos = {
-			includes = [
+			imports = [
 
 			];
 
@@ -25,7 +25,7 @@
 		};
 
 		homeManager = {
-			includes = [
+			imports = [
 
 			];
 		};

@@ -11,12 +11,7 @@
 			];
 		};
 
-		homeMangager = { pkgs, ... }: {
-			# programs.thunderbird.enable alone is not enough
-			home.packages = with pkgs; [
-				thunderbird
-			];
-
+		homeMangager = { ... }: {
 			programs.thunderbird = {
 				enable = true;
 				# settings applied to all profiles

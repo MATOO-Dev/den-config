@@ -6,18 +6,18 @@
 	den.aspects.firefox.homeManager = { ... }: {
 		programs.firefox = {
 			enable = true;
-			languagePacks = [ "en-US" ];
+			# languagePacks = [ "en-US" ];
 			policies = {
-				AppAutoUpdate = false;
-				BackgroundAppUpdate = false;
-				DisableFirefoxStudies = true;
-				DisableTelemetry = true;
-				DisablePasswordReveal = true;
-				DisplayMenuBar = "never";
-				DontCheckDefaultBrowser = true;
-				HardwareAcceleration = true;
-				OfferToSaveLogins = false;
-				DefaultDownloadDirectory = "\${home}/Downloads";
+				# AppAutoUpdate = false;
+				# BackgroundAppUpdate = false;
+				# DisableFirefoxStudies = true;
+				# DisableTelemetry = true;
+				# DisablePasswordReveal = true;
+				# DisplayMenuBar = "never";
+				# DontCheckDefaultBrowser = true;
+				# HardwareAcceleration = true;
+				# OfferToSaveLogins = false;
+				# DefaultDownloadDirectory = "\${home}/Downloads";
 
 				ExtensionSettings = let
 					mox-ext = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
@@ -97,47 +97,47 @@
 				# 	};
 				# };
 			};
-			profiles.matoo = {
-				search = {
-					default = "ecosia";
-					privateDefault = "ecosia";
-
-					engines = {
-						google.metaData.alias = "@g";
-						bing.metaData.hidden = true;
-						duckduckgo.metaData.hidden = true;
-						ecosia = {
-							name = "Ecosia";
-							urls = [{ template = "https://ecosia.org/search?q={searchTerms}"; }];
-							icon = "https://ecosia.org/favicon.ico";
-						};
-						nix-packages = {
-							name = "Nix package search";
-							urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
-							icon = "https://nixos.org/favicon.ico";
-							definesAliases = [ "@np" ];
-						};
-						nix-options = {
-							name = "Nix option search";
-							urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
-							icon = "https://nixos.org/favicon.ico";
-							definesAliases = [ "@no" ];
-						};
-						nixos-wiki = {
-							name = "NixOS wiki";
-							urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
-							icon = "https://wiki.nixos.org/favicon.ico";
-							definesAliases = [ "@nw" ];
-						};
-						mynixos = {
-							name = "MyNixOS";
-							urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
-							icon = "https://mynixos.com/favicon.ico";
-							definesAliases = [ "@ns" ];
-						};
-					};
-				};
-			};
+			# profiles.matoo = {
+			# 	search = {
+			# 		default = "ecosia";
+			# 		privateDefault = "ecosia";
+			#
+			# 		engines = {
+			# 			google.metaData.alias = "@g";
+			# 			bing.metaData.hidden = true;
+			# 			duckduckgo.metaData.hidden = true;
+			# 			ecosia = {
+			# 				name = "Ecosia";
+			# 				urls = [{ template = "https://ecosia.org/search?q={searchTerms}"; }];
+			# 				icon = "https://ecosia.org/favicon.ico";
+			# 			};
+			# 			nix-packages = {
+			# 				name = "Nix package search";
+			# 				urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
+			# 				icon = "https://nixos.org/favicon.ico";
+			# 				definesAliases = [ "@np" ];
+			# 			};
+			# 			nix-options = {
+			# 				name = "Nix option search";
+			# 				urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
+			# 				icon = "https://nixos.org/favicon.ico";
+			# 				definesAliases = [ "@no" ];
+			# 			};
+			# 			nixos-wiki = {
+			# 				name = "NixOS wiki";
+			# 				urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
+			# 				icon = "https://wiki.nixos.org/favicon.ico";
+			# 				definesAliases = [ "@nw" ];
+			# 			};
+			# 			mynixos = {
+			# 				name = "MyNixOS";
+			# 				urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+			# 				icon = "https://mynixos.com/favicon.ico";
+			# 				definesAliases = [ "@ns" ];
+			# 			};
+			# 		};
+			# 	};
+			# };
 		};
 	};
 }

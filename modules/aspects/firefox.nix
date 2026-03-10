@@ -99,75 +99,42 @@
 				# 	};
 				# };
 			};
-			# profiles.matoo = {
-			# 	search = {
-			# 		default = "ecosia";
-			# 		privateDefault = "ecosia";
-			#
-			# 		engines = {
-			# 			google.metaData.alias = "@g";
-			# 			bing.metaData.hidden = true;
-			# 			duckduckgo.metaData.hidden = true;
-			# 			ecosia = {
-			# 				name = "Ecosia";
-			# 				urls = [{ template = "https://ecosia.org/search?q={searchTerms}"; }];
-			# 				icon = "https://ecosia.org/favicon.ico";
-			# 			};
-			# 			nix-packages = {
-			# 				name = "Nix package search";
-			# 				urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
-			# 				icon = "https://nixos.org/favicon.ico";
-			# 				definesAliases = [ "@np" ];
-			# 			};
-			# 			nix-options = {
-			# 				name = "Nix option search";
-			# 				urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
-			# 				icon = "https://nixos.org/favicon.ico";
-			# 				definesAliases = [ "@no" ];
-			# 			};
-			# 			nixos-wiki = {
-			# 				name = "NixOS wiki";
-			# 				urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
-			# 				icon = "https://wiki.nixos.org/favicon.ico";
-			# 				definesAliases = [ "@nw" ];
-			# 			};
-			# 			mynixos = {
-			# 				name = "MyNixOS";
-			# 				urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
-			# 				icon = "https://mynixos.com/favicon.ico";
-			# 				definesAliases = [ "@ns" ];
-			# 			};
-			# 		};
-			# 	};
-			# };
+			profiles.matoo = {
+				search = {
+					default = "ecosia";
+					privateDefault = "ecosia";
+
+					engines = {
+						google.metaData.alias = "@g";
+						bing.metaData.hidden = true;
+						duckduckgo.metaData.hidden = true;
+						nix-packages = {
+							name = "Nix package search";
+							urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
+							icon = "https://nixos.org/favicon.ico";
+							definesAliases = [ "@np" ];
+						};
+						nix-options = {
+							name = "Nix option search";
+							urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
+							icon = "https://nixos.org/favicon.ico";
+							definesAliases = [ "@no" ];
+						};
+						nixos-wiki = {
+							name = "NixOS wiki";
+							urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
+							icon = "https://wiki.nixos.org/favicon.ico";
+							definesAliases = [ "@nw" ];
+						};
+						mynixos = {
+							name = "MyNixOS";
+							urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+							icon = "https://mynixos.com/favicon.ico";
+							definesAliases = [ "@ns" ];
+						};
+					};
+				};
+			};
 		};
 	};
 }
-
-
-
-# # 600 % sound volume # increase volume up to 600 %
-# clearurls # remove tracking parameters from URLs
-# consent-o-matic # automatically decline cookie popups
-# # cookie remover
-# darkreader # dark mode overrides
-# enhancer-for-youtube # various additional youtube settings
-# export-tabs-urls-and-titles # export open tabs as link list
-# indie-wiki-buddy # redirect to better wikis
-# # open multiple urls
-# privacy-badger # block hidden trackers
-# proton-pass # password manager
-# proton-vpn # in-browser vpn integration
-# # reddit untranslate
-# # redirect nix wiki
-# redirect-shorts-to-youtube # show shorts as regular videos
-# return-youtube-dislikes # restores the dislike feature
-# # shadertoy unofficial plugin
-# sponsorblock # block youtube sponsors
-# tampermonkey # run custom scripts
-# umatrix # fine grained request management
-# unpaywall # show scholarly articles
-# user-agent-string-switcher # spoof user agent
-# vimium # vim keybinds in the browser
-# youtube-no-translation # disable auto-dubbing for youtube
-# youtube-shorts-block # block shorts in feed

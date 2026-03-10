@@ -27,20 +27,19 @@
 							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
 							default_area = area;
 							private_browsing = private;
-							installation_mode = "force_installed";
-							blocked_install_message = "This extension's installation was blocked";
 						};
 					};
 				in lib.listToAttrs [
 					(get-extension "ublock-origin" "uBlock0@raymondhill.net" true "menupanel")
-				];
-				# {
-				# 	"*" = {
-				# 		# installation_mode = "blocked";
-				# 		installation_mode = "force_installed";
-				# 		allowed_types = [ "extension" ];
-				# 		updates_disabled = true;
-				# 	};
+				] ++
+				{
+					"*" = {
+						allowed_types = [ "extension" ];
+						installation_mode = "force_installed";
+						updates_disabled = true;
+						blocked_install_message = "This extension's installation was blocked";
+					};
+				};
 				# 	# increase volume up to 600 %
 				# 	# "600-sound-volume".install_url = mox-ext "600-sound-volume";
     #                 # remove tracking parameters from urls

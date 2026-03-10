@@ -20,13 +20,13 @@
 				# DefaultDownloadDirectory = "\${home}/Downloads";
 
 				ExtensionSettings = let
-					# mox-ext = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
+					# function stolen & adjusted from github user abhinandh-s
 					get-extension = slug: uuid: private: area: {
 						name = uuid;
 						value = {
 							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${slug}/latest.xpi";
-							default_area = area;
-							private_browsing = private;
+							default_area = area ? "menupanel";
+							private_browsing = private ? false;
 							allowed_types = [ "extension" ];
 							installation_mode = "force_installed";
 							updates_disabled = true;
@@ -35,9 +35,11 @@
 					};
 				in lib.listToAttrs [
 					# increase volume up to 600 %
-					(get-extension "600-sound-volume" "{c4b582ec-4343-438c-bda2-2f691c16c262}" false "menupanel")
+					(get-extension "600-sound-volume" "{c4b582ec-4343-438c-bda2-2f691c16c262}")
+					# remove tracking parameters from urls
+					(get-extension "clearurls" "{74145f27-f039-47ce-a470-a662b129930a}" true)
 					# block ads and other annoying stuff
-					(get-extension "ublock-origin" "uBlock0@raymondhill.net" true "menupanel")
+					(get-extension "ublock-origin" "uBlock0@raymondhill.net" true)
 				]; # ++
 				# {
 				# 	"*" = {
@@ -47,8 +49,6 @@
 				# 		blocked_install_message = "This extension's installation was blocked";
 				# 	};
 				# };
-				# 	# "600-sound-volume".install_url = mox-ext "600-sound-volume";
-    #                 # remove tracking parameters from urls
 				# 	# "clear-urls" = {
 				# 	# 	install_url = mox-ext "clearurls";
 				# 	# 	private_browsing = true;

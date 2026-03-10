@@ -7,7 +7,9 @@
 	den.aspects.matoo = {
 		# modules for this user
 		includes = [
-			# set user shell for nixos and home manager
+			# set wheel/networkmanager groups
+			den.provides.primary-user
+			# set login shell
 			(den.provides.user-shell "zsh")
 			# custom aspects
 			den.aspects.git
@@ -20,10 +22,7 @@
 		user = { pkgs, ... }: {
 			isNormalUser = true;
 			description = "MATOO";
-			extraGroups = [ 
-				"wheel"
-				"networkmanager"
-			];
+			extraGroups = [ ];
 			# only used once right after installing
 			# don't forget to set password after installing
 			initialPassword = "12345";

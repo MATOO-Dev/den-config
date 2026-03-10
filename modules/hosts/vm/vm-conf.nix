@@ -8,14 +8,13 @@
 		# re-usable modules here
 		includes = [
 			# general
-			# below now defined through den.schema.user and den.aspects.matoo
-			# self.nixosModules.matoo
 
 			# system
 			den.aspects.audio
 			den.aspects.bluetooth
 			den.aspects.bootloader
 			den.aspects.fonts
+			den.aspects.gaming
 			den.aspects.input
 			# den.aspects.kernel
 			den.aspects.locale

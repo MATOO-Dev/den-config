@@ -6,18 +6,18 @@
 	den.aspects.firefox.homeManager = { lib, ... }: {
 		programs.firefox = {
 			enable = true;
-			# languagePacks = [ "en-US" ];
+			languagePacks = [ "en-US" ];
 			policies = {
-				# AppAutoUpdate = false;
-				# BackgroundAppUpdate = false;
-				# DisableFirefoxStudies = true;
-				# DisableTelemetry = true;
-				# DisablePasswordReveal = true;
-				# DisplayMenuBar = "never";
-				# DontCheckDefaultBrowser = true;
-				# HardwareAcceleration = true;
-				# OfferToSaveLogins = false;
-				# DefaultDownloadDirectory = "\${home}/Downloads";
+				AppAutoUpdate = false;
+				BackgroundAppUpdate = false;
+				DisableFirefoxStudies = true;
+				DisableTelemetry = true;
+				DisablePasswordReveal = true;
+				DisplayMenuBar = "never";
+				DontCheckDefaultBrowser = true;
+				HardwareAcceleration = true;
+				OfferToSaveLogins = false;
+				DefaultDownloadDirectory = "\${home}/Downloads";
 
 				ExtensionSettings = let
 					# function stolen & adjusted from github user abhinandh-s
@@ -39,7 +39,7 @@
 					# remove tracking parameters from urls
 					(get-extension "clearurls" "{74145f27-f039-47ce-a470-a662b129930a}" true "menupanel")
 					# automatically decline cookie popups
-					(get-extension "consent-o-matic" "gdpr@cavi.au.dk" false "menupanel")
+					(get-extension "consent-o-matic" "gdpr@cavi.au.dk" true "menupanel")
 					# remove cookies for the current site
 					(get-extension "cookie-remover" "{3507f56d-2ef5-45c1-b6d7-5297a0ba7642}" false "menupanel")
 					# dark mode overrides for all pages
@@ -55,15 +55,13 @@
 					# block hidden trackers
 					(get-extension "privacy-badger17" "jid1-MnnxcxisBPnSXQ@jetpack" false "menupanel")
 					# password manager
-					(get-extension "proton-pass" "78272b6fa58f4a1abaac99321d503a20@proton.me" false "menupanel")
+					(get-extension "proton-pass" "78272b6fa58f4a1abaac99321d503a20@proton.me" false "navbar")
 					# in-browser vpn integration
 					(get-extension "proton-vpn-firefox-extension" "vpn@proton.ch" false "menupanel")
 					# stop translating reddit pages
 					(get-extension "reddituntranslate" "reddit-url-redirector@kichkoupi.com" false "menupanel")
 					# redirect to the official nixos wiki
 					(get-extension "redirectnixwiki" "redirect-nix-wiki@undesided.me" false "menupanel")
-					# show shorts as regular videos
-					# (get-extension "???" "???" false "menupanel")
 					# restores the dislike feature
 					(get-extension "return-youtube-dislikes" "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" false "menupanel")
 					# block ads and other annoying stuff
@@ -75,16 +73,16 @@
 					# run custom scripts
 					(get-extension "tempermonkey" "firefox@tampermonkey.net" false "menupanel")
 					# fine grained request management
-					(get-extension "umatrix" "uMatrix@raymondhill.net" false "menupanel")
+					(get-extension "umatrix" "uMatrix@raymondhill.net" false "navbar")
 					# show scholarly articles
-					(get-extension "unpaywall" "{f209234a-76f0-4735-9920-eb62507a54cd}" false "menupanel")
+					(get-extension "unpaywall" "{f209234a-76f0-4735-9920-eb62507a54cd}" true "menupanel")
 					# spoof user agent
 					(get-extension "user-agent-string-switcher" "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}" false "menupanel")
 					# vim keybinds in the browser
-					(get-extension "vimium-ff" "{d7742d87-e61d-4b78-b8a1-b469842139fa}" false "menupanel")
+					(get-extension "vimium-ff" "{d7742d87-e61d-4b78-b8a1-b469842139fa}" true "navbar")
 					# disable auto-dubbing for youtube
 					(get-extension "youtube-no-translation" "{9a3104a2-02c2-464c-b069-82344e5ed4ec}" false "menupanel")
-					# block youtube shorts in feed
+					# play youtube shorts as regular videos
 					(get-extension "youtube-shorts-block" "{34daeb50-c2d2-4f14-886a-7160b24d66a4}" false "menupanel")
 				]; # ++
 

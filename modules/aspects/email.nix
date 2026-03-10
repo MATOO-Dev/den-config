@@ -11,10 +11,22 @@
 			];
 		};
 
-		homeMangager = {
+		homeMangager = { pkgs, ... }: {
+			# programs.thunderbird.enable alone is not enough
+			home.packages = with pkgs; [
+				thunderbird
+			];
+
 			programs.thunderbird = {
 				enable = true;
-				# settings = { };
+				# settings applied to all profiles
+				settings = {
+					"privacy.donottrackheader.enabled" = true;
+				};
+
+				profiles.default = {
+					isDefault = true;
+				};
 			};
 		};
 	};

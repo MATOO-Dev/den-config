@@ -18,6 +18,7 @@
 			den.aspects.input
 			den.aspects.kernel
 			den.aspects.locale
+			den.aspects.localsend
 			den.aspects.login
 			den.aspects.networking
 			den.aspects.niri

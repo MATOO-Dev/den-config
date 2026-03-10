@@ -3,7 +3,7 @@
 		environment.sessionVariables.MOX_ENABLE_WAYLAND = 1;
 	};
 
-	den.aspects.firefox.homeManager = { ... }: {
+	den.aspects.firefox.homeManager = { lib, ... }: {
 		programs.firefox = {
 			enable = true;
 			# languagePacks = [ "en-US" ];
@@ -20,76 +20,88 @@
 				# DefaultDownloadDirectory = "\${home}/Downloads";
 
 				ExtensionSettings = let
-					mox-ext = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
-				in {
-					"*" = {
-						# installation_mode = "blocked";
-						installation_mode = "force_installed";
-						allowed_types = [ "extension" ];
-						updates_disabled = true;
+					# mox-ext = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
+					foo = name: uuid: {
+						name = uuid;
+						value = {
+							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
+							installation_mode = "force_installed";
+							default_area = "menupanel";
+							blocked_install_message = "blocked";
+						};
 					};
-					# increase volume up to 600 %
-					# "600-sound-volume".install_url = mox-ext "600-sound-volume";
-                    # remove tracking parameters from urls
-					# "clear-urls" = {
-					# 	install_url = mox-ext "clearurls";
-					# 	private_browsing = true;
-					# };
-                    # automatically decline cookie popups
-					# "consent-o-matic".install_url = mox-ext "consent-o-matic";
-					# remove cookies for the current site
-					# "cookie-remover".install_url = "cookie-remover";
-					# dark mode overrides for all pages
-					# "dark-reader" = {
-					# 	install_url = "darkreader";
-					# 	private_browsing = true;
-					# };
-					# various additional youtube settings
-					# "enhancer-for-youtube".install-url = "enhancer-for-youtube";
-					# export open tabs as link list
-					# "export-tabs-urls".install_url = "export-tabs-urls-and-titles";
-					# redirect to better wikis
-					# "indie-wiki-buddy".install_url = "indie-wiki-buddy";
-					# open list of urls
-					# "open-multiple-urls".install_url = "open-multiple-urls";
-					# block hidden trackers
-					# "privacy-badger".install_url = "privacy-badger17";
-					# password manager
-					# "proton-pass".install_url = "proton-pass";
-					# in-browser vpn integration
-					# "proton-vpn".install_url = "proton-vpn-firefox-extension";
-					# stop translating reddit pages
-					# "reddit-untranslate".install_url = "reddituntranslate";
-					# redirect to the official nixos wiki
-					# "redirect-nix-wiki".install_url = "redirectnixwiki";
-					# show shorts as regular videos
-					# ???
-					# restores the dislike feature
-					# "return-youtube-dislikes".install_url = "return-youtube-dislikes";
-					# unofficial plugin for shadertoy
-					# "shadertoy-unofficial-plugin".install_url = "shadertoy-unofficial-plugin";
-					# block youtube sponsors
-					# "sponsorblock".install_url = "sponsorblock";
-					# run custom scripts
-					# "tampermonkey".install_url = "tampermonkey";
-                    # block ads and other annoying stuff
-					"uBlock0@raymondhill.net" = {
-						install_url = mox-ext "ublock-origin";
-						private_browsing = true;
-					};
-					# fine grained request management
-					# "umatrix".install_url = "umatrix";
-					# show scholarly articles
-					# "unpaywall".install_url = "unpaywall";
-					# spoof user agent
-					# "user-agent-switcher".install_url = "user-agent-string-switcher";
-					# vim keybinds in the browser
-					# "vimium".install_url = "vimium-ff";
-					# disable auto-dubbing for youtube
-					# "youtube-no-translation".install_url = "youtube-no-translation";
-					# block youtube shorts in feed
-					# "youtube-shorts-block".install_url = "youtube-shorts-block";
-				};
+				in lib.listToAttrs [
+					(foo "ublock-origin" "uBlock0@raymondhill.net")
+				];
+				# {
+				# 	"*" = {
+				# 		# installation_mode = "blocked";
+				# 		installation_mode = "force_installed";
+				# 		allowed_types = [ "extension" ];
+				# 		updates_disabled = true;
+				# 	};
+				# 	# increase volume up to 600 %
+				# 	# "600-sound-volume".install_url = mox-ext "600-sound-volume";
+    #                 # remove tracking parameters from urls
+				# 	# "clear-urls" = {
+				# 	# 	install_url = mox-ext "clearurls";
+				# 	# 	private_browsing = true;
+				# 	# };
+    #                 # automatically decline cookie popups
+				# 	# "consent-o-matic".install_url = mox-ext "consent-o-matic";
+				# 	# remove cookies for the current site
+				# 	# "cookie-remover".install_url = "cookie-remover";
+				# 	# dark mode overrides for all pages
+				# 	# "dark-reader" = {
+				# 	# 	install_url = "darkreader";
+				# 	# 	private_browsing = true;
+				# 	# };
+				# 	# various additional youtube settings
+				# 	# "enhancer-for-youtube".install-url = "enhancer-for-youtube";
+				# 	# export open tabs as link list
+				# 	# "export-tabs-urls".install_url = "export-tabs-urls-and-titles";
+				# 	# redirect to better wikis
+				# 	# "indie-wiki-buddy".install_url = "indie-wiki-buddy";
+				# 	# open list of urls
+				# 	# "open-multiple-urls".install_url = "open-multiple-urls";
+				# 	# block hidden trackers
+				# 	# "privacy-badger".install_url = "privacy-badger17";
+				# 	# password manager
+				# 	# "proton-pass".install_url = "proton-pass";
+				# 	# in-browser vpn integration
+				# 	# "proton-vpn".install_url = "proton-vpn-firefox-extension";
+				# 	# stop translating reddit pages
+				# 	# "reddit-untranslate".install_url = "reddituntranslate";
+				# 	# redirect to the official nixos wiki
+				# 	# "redirect-nix-wiki".install_url = "redirectnixwiki";
+				# 	# show shorts as regular videos
+				# 	# ???
+				# 	# restores the dislike feature
+				# 	# "return-youtube-dislikes".install_url = "return-youtube-dislikes";
+				# 	# unofficial plugin for shadertoy
+				# 	# "shadertoy-unofficial-plugin".install_url = "shadertoy-unofficial-plugin";
+				# 	# block youtube sponsors
+				# 	# "sponsorblock".install_url = "sponsorblock";
+				# 	# run custom scripts
+				# 	# "tampermonkey".install_url = "tampermonkey";
+    #                 # block ads and other annoying stuff
+				# 	"uBlock0@raymondhill.net" = {
+				# 		install_url = mox-ext "ublock-origin";
+				# 		private_browsing = true;
+				# 	};
+				# 	# fine grained request management
+				# 	# "umatrix".install_url = "umatrix";
+				# 	# show scholarly articles
+				# 	# "unpaywall".install_url = "unpaywall";
+				# 	# spoof user agent
+				# 	# "user-agent-switcher".install_url = "user-agent-string-switcher";
+				# 	# vim keybinds in the browser
+				# 	# "vimium".install_url = "vimium-ff";
+				# 	# disable auto-dubbing for youtube
+				# 	# "youtube-no-translation".install_url = "youtube-no-translation";
+				# 	# block youtube shorts in feed
+				# 	# "youtube-shorts-block".install_url = "youtube-shorts-block";
+				# };
 
 				# "3rdparty".Extensions = {
 				# 	"xyz".adminSettings = {

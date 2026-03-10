@@ -45,7 +45,7 @@
 		};
 
 		# home settings for all users on this system
-		homeManager = { pkgs, ... }:
+		homeManager = { ... }:
 		{
 			home.packages = [  ];
 		};

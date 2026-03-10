@@ -13,6 +13,7 @@
 			den.aspects.audio
 			den.aspects.bluetooth
 			den.aspects.bootloader
+			den.aspects.email
 			den.aspects.fonts
 			den.aspects.gaming
 			den.aspects.input

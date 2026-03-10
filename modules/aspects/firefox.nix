@@ -21,17 +21,18 @@
 
 				ExtensionSettings = let
 					# mox-ext = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
-					foo = name: uuid: {
+					get-extension = name: uuid: private: area: {
 						name = uuid;
 						value = {
 							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
+							default_area = area;
+							private_browsing = private;
 							installation_mode = "force_installed";
-							default_area = "menupanel";
-							blocked_install_message = "blocked";
+							blocked_install_message = "This extension's installation was blocked";
 						};
 					};
 				in lib.listToAttrs [
-					(foo "ublock-origin" "uBlock0@raymondhill.net")
+					(get-extension "ublock-origin" "uBlock0@raymondhill.net" true "menupanel")
 				];
 				# {
 				# 	"*" = {

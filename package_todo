@@ -20,10 +20,6 @@ scons?
 #### gaming aspect ####
 #######################
 
-beyondallreason # gaming aspect
-prism-launcher # gaming aspect
-r2modman # gaming aspect
-vintagestory # gaming aspect
 xpadneo-dkms? # gaming aspect
 
 ########################

@@ -32,7 +32,11 @@
 			};
 
 			home.packages = with pkgs; [
-				heroic
+				beyond-all-reason # FOSS RTS game
+				heroic # game launcher for GOG, etc.
+				prismlauncher-qt5 # minecraft launcher
+				r2modman # modding tool
+				vintagestory # survival game
 			];
 		};
 	};

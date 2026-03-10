@@ -30,6 +30,10 @@
 				enable = true;
 				defaultWinePackage = pkgs.proton-ge-bin;
 			};
+
+			packages = with pkgs; [
+				heroic
+			];
 		};
 	};
 }

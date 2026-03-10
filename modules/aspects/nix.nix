@@ -31,4 +31,10 @@
 			channel = inputs.flake.nixpkgs;
 		};
 	};
+
+	den.aspects.nix.homeManager = { ... }: {
+		nixpkgs.config = {
+			allowUnfree = true; 
+		};
+	};
 }

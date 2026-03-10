@@ -17,6 +17,7 @@
 			den.aspects.hyprland
 			den.aspects.kitty
 			den.aspects.niri
+			den.aspects.nix
 			den.aspects.packages
 		];
 

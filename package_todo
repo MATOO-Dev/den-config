@@ -1,55 +1,127 @@
-##############################
-#### configure separately ####
-##############################
+#######################
+#### coding aspect ####
+#######################
 
-bacon # coding aspect
+bacon
+clang
+clang-tools
+gdb (debugger)
+godot
+renderdoc
+rustlings
+valgrind
+assimp? (asset importer lib)
+cargo-deny?
+glad (opengl library?)
+qtcreator?
+scons?
+
+#######################
+#### gaming aspect ####
+#######################
+
 beyondallreason # gaming aspect
+prism-launcher # gaming aspect
+r2modman # gaming aspect
+vintagestory # gaming aspect
+xpadneo-dkms? # gaming aspect
+
+########################
+#### browser aspect ####
+########################
+
 chromium # browser aspect
-clang # coding aspect
-clang-tools # coding aspect
+firefox # browser aspect
+
+########################
+#### discord aspect ####
+########################
+
 discord/vencord/vesktop # discord aspect
 discover-overlay # discord aspect
-firefox # browser aspect
-gdb (debugger) # coding aspect
-godot # godot or coding aspect
+
+##########################
+#### recording aspect ####
+##########################
+
 gpu-screen-recorder-ui # recording aspect
-localsend # double check this
-neovim # nvim aspect or nvf or nixcats
+
+###########################
+#### notetaking aspect ####
+###########################
+
 obsidian # notetaking or obsidian aspect
-prism-launcher # gaming aspect
-proton-authenticator # password or security aspect
-proton-mail # double check this
+typst # notetaking or typst aspect
+
+####################
+#### vpn aspect ####
+####################
+
 proton-vpn # vpn aspect
-r2modman # gaming aspect
-renderdoc # coding aspect
-rmtrash # possibly shell aspect?
-rustlings # coding aspect
-scrcpy # might need firewall
-sherlock-launcher # needs configuration
-syncthing # needs configuration
+openfortivpn? # vpn aspect
+
+########################
+#### backups aspect ####
+########################
+
 timeshift/snapper # backups aspect
 timeshift-autosnap # backups aspect
-typst # notetaking or typst aspect
-valgrind # coding aspect
-vintagestory # gaming aspect
+
+######################
+#### shell aspect ####
+######################
+
+rmtrash # possibly shell aspect?
 waybar # shell or desktop aspect
-xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
 zoxide # shells or similar aspect
-zsh/zsh-autosuggestions/completions/syntax-hightlighting/vi-mode # sheels or similar aspect
-assimp? (asset importer lib) # coding aspect
-cargo-deny? # coding aspect
+fish? # shells or similar
+zsh/zsh-autosuggestions/completions/syntax-hightlighting/vi-mode # shells or similar aspect
+
+###############################
+#### virtualization aspect ####
+###############################
+
+virt-manager? # virtualization aspect
+
+######################
+#### double check ####
+######################
+
+localsend
+proton-mail
+thunderbird
+
+#############################
+#### needs configuration ####
+#############################
+
+sherlock-launcher # needs configuration
+syncthing # needs configuration
+vicinae? (app launcher) # needs configuration
+hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # needs configuration
+
+####################
+#### might skip ####
+####################
+
 coolercontrol? # might skip
 corectrl? # might skip
 fancontrol-gui? # might skip
-fish? # shells or similar
-glad (opengl library?) # coding aspect
 it87 (kernel module for fans)? # might skip
-openfortivpn? # vpn aspect
-qtcreator? # coding aspect
-scons? # coding aspect
-sticker-convert? # not packaged
 ms-fonts? # might skip
-virt-manager? # virtualization aspect
-xpadneo-dkms? # gaming aspect
-vicinae? (app launcher) # needs configuration
-hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # needs configuration
+xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
+
+###############################
+#### configured separately ####
+###############################
+
+neovim # nvim aspect or nvf or nixcats
+
+
+###############
+#### other ####
+###############
+
+proton-authenticator # password or security aspect?
+scrcpy # might need firewall
+sticker-convert? # not packaged

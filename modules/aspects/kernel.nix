@@ -1,6 +1,6 @@
 {
-	den.aspects.kernel.nixos = { pkgs-unstable, ... }: {
+	den.aspects.kernel.nixos = { pkgs, ... }: {
 		# use newest available kernel
-		boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
+		boot.kernelPackages = pkgs.linuxPackages_latest;
 	};
 }

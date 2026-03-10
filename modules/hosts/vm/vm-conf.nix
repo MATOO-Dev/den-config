@@ -16,7 +16,7 @@
 			den.aspects.fonts
 			den.aspects.gaming
 			den.aspects.input
-			# den.aspects.kernel
+			den.aspects.kernel
 			den.aspects.locale
 			den.aspects.login
 			den.aspects.networking

@@ -31,7 +31,7 @@
 				defaultWinePackage = pkgs.proton-ge-bin;
 			};
 
-			packages = with pkgs; [
+			home.packages = with pkgs; [
 				heroic
 			];
 		};

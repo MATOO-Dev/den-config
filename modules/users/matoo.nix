@@ -12,14 +12,14 @@
 			# set login shell
 			(den.provides.user-shell "zsh")
 			# custom aspects
-			den.aspects.browser
 			den.aspects.email
+			den.aspects.firefox
 			den.aspects.git
 			den.aspects.hyprland
 			den.aspects.kitty
 			den.aspects.niri
 			den.aspects.nix
-			den.aspects.packages
+			den.aspects.extraPackages
 		];
 
 		# general user config

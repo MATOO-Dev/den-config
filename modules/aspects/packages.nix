@@ -1,5 +1,5 @@
 {
-	den.aspects.packages = {
+	den.aspects.extraPackages = {
 		nixos = { pkgs, ... }: {
 			environment.systemPackages = with pkgs; [
 				vim # text editor
@@ -13,6 +13,7 @@
 				# ark # kde zip tool
 				audacity # audio editor
 				blender # 3d modeling
+				chromium # backup browser, main is firefox
 				# dolphin # file browser
 				drawio # diagram maker
 				# easytag # media metadata editor

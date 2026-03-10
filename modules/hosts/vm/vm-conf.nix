@@ -14,6 +14,7 @@
 			den.aspects.bluetooth
 			den.aspects.bootloader
 			den.aspects.email
+			den.aspects.firefox
 			den.aspects.fonts
 			den.aspects.gaming
 			den.aspects.input
@@ -26,7 +27,7 @@
 			den.aspects.nix
 			den.aspects.printing
 			den.aspects.virtualization
-			den.aspects.packages
+			den.aspects.extraPackages
 
 			# hardware
 			# den.aspects.vm-disk

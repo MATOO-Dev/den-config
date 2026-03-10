@@ -23,12 +23,6 @@
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
 		# lanzaboote.url = "github:nix-community/lanzaboote";
-
-		# firefox and thunderbird addons declared with nix
-		firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-		firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
-		thunderbird-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/thunderbird-addons";
-		thunderbird-addons.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
 	outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

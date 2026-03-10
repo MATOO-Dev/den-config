@@ -12,6 +12,7 @@
 			# set login shell
 			(den.provides.user-shell "zsh")
 			# custom aspects
+			den.aspects.browser
 			den.aspects.email
 			den.aspects.git
 			den.aspects.hyprland

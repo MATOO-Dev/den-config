@@ -9,6 +9,10 @@
 			newcomputermodern
 			# default typst font
 			libertinus
+			# inter font with nerd patches
+			inter-nerdfont
+			# noto font
+			noto-fonts
 		]
 		++
 		builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);

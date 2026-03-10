@@ -29,5 +29,11 @@
 				"scanner" # scanning
 			];
 		};
+
+		homeManager = { pkgs, ... }: {
+			home.packages = with pkgs; [
+				simple-scan # gnome scanning app
+			];
+		};
 	};
 }

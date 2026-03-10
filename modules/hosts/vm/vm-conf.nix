@@ -26,6 +26,7 @@
 			den.aspects.nix
 			den.aspects.printing
 			den.aspects.virtualization
+			den.aspects.packages
 
 			# hardware
 			# den.aspects.vm-disk

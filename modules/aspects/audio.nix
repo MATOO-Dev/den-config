@@ -1,5 +1,9 @@
 {
-	den.aspects.audio.nixos = { ... }: {
+	den.aspects.audio.nixos = { pkgs, ... }: {
+		environment.systemPackages = with pkgs; [
+			pavucontrol
+		];
+
 		services = {
 			pulseaudio.enable = false;
 			pipewire = {

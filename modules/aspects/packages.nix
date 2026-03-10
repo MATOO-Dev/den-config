@@ -1,0 +1,60 @@
+{
+	den.aspects.packages = {
+		nixos = { pkgs, ... }: {
+			environment.systemPackages = with pkgs; [
+				vim # text editor
+			];
+		};
+
+		homeManager = { pkgs, ... }: {
+			home.packages = with pkgs; [
+				# amberol # music player
+				anki # flashcards
+				# ark # kde zip tool
+				audacity # audio editor
+				blender # 3d modeling
+				# dolphin # file browser
+				drawio # diagram maker
+				# easytag # media metadata editor
+				element-desktop # matrix client
+				eog # gnome image viewer
+				evince # gnome pdf viewer
+				fastfetch # fetch application
+				ffmpeg # media transcoder
+				foliate # ebook reader
+				gimp # image editor
+				gnome-obfuscate # information censor
+				# gnuplot # graph plotting
+				handbrake # ffmpeg frontend
+				identity # media comparer
+				kdePackages.kdenlive # video editor
+				kdePackages.kolourpaint # paint scribbles
+				kdePackages.kruler # measuring tool
+				# libreoffice # office suite
+				masterpdfeditor # pdf editor
+				mission-center # task manager
+				mpv # video player
+				nautilus # file browser
+				numbat # scientific calculation lang
+				# onlyoffice-bin # office suite
+				pandoc # document converter
+				pdfarranger # reorder and merge pdfs
+				pdfpc # pdf presentation presenter
+				pixieditor # image editor
+				# protonplus # proton version manager
+				ripgrep # grep through files
+				signal-desktop # messaging app
+				# spotify # music app # also consider spicetify
+				tldr # simplified man pages
+				tree # print file tree
+				unzip # unzipping from cli
+				vlc # video player
+				xournalpp # pdf annotation tool
+				yt-dlg # download videos graphically
+				yt-dlp # download videos from cli
+				wget2 # cli file downloader
+				zapzap # whatapp client
+			];
+		};
+	};
+}

@@ -23,11 +23,12 @@
 			programs.gamemode.enable = true;
 		};
 
-		homeManager = { pkgs-unstable, ... }: {
+		# todo: consider moving this to pkgs-unstable
+		homeManager = { pkgs, ... }: {
 			programs.mangohud.enable = true;
 			programs.lutris = {
 				enable = true;
-				defaultWinePackage = pkgs-unstable.proton-ge-bin;
+				defaultWinePackage = pkgs.proton-ge-bin;
 			};
 		};
 	};

@@ -21,26 +21,32 @@
 
 				ExtensionSettings = let
 					# mox-ext = name: "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
-					get-extension = name: uuid: private: area: {
+					get-extension = slug: uuid: private: area: {
 						name = uuid;
 						value = {
-							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${name}/latest.xpi";
+							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${slug}/latest.xpi";
 							default_area = area;
 							private_browsing = private;
+							allowed_types = [ "extension" ];
+							installation_mode = "force_installed";
+							updates_disabled = true;
+							blocked_install_message = "This extension's installation was blocked";
 						};
 					};
 				in lib.listToAttrs [
+					# increase volume up to 600 %
+					(get-extension "600-sound-volume" "{c4b582ec-4343-438c-bda2-2f691c16c262}" false "menupanel")
+					# block ads and other annoying stuff
 					(get-extension "ublock-origin" "uBlock0@raymondhill.net" true "menupanel")
-				] ++
-				{
-					"*" = {
-						allowed_types = [ "extension" ];
-						installation_mode = "force_installed";
-						updates_disabled = true;
-						blocked_install_message = "This extension's installation was blocked";
-					};
-				};
-				# 	# increase volume up to 600 %
+				]; # ++
+				# {
+				# 	"*" = {
+				# 		allowed_types = [ "extension" ];
+				# 		installation_mode = "force_installed";
+				# 		updates_disabled = true;
+				# 		blocked_install_message = "This extension's installation was blocked";
+				# 	};
+				# };
 				# 	# "600-sound-volume".install_url = mox-ext "600-sound-volume";
     #                 # remove tracking parameters from urls
 				# 	# "clear-urls" = {
@@ -84,11 +90,6 @@
 				# 	# "sponsorblock".install_url = "sponsorblock";
 				# 	# run custom scripts
 				# 	# "tampermonkey".install_url = "tampermonkey";
-    #                 # block ads and other annoying stuff
-				# 	"uBlock0@raymondhill.net" = {
-				# 		install_url = mox-ext "ublock-origin";
-				# 		private_browsing = true;
-				# 	};
 				# 	# fine grained request management
 				# 	# "umatrix".install_url = "umatrix";
 				# 	# show scholarly articles

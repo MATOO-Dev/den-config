@@ -71,7 +71,7 @@
 					# block youtube sponsors
 					(get-extension "sponsorblock" "sponsorBlocker@ajay.app" false "menupanel")
 					# run custom scripts
-					(get-extension "tempermonkey" "firefox@tampermonkey.net" false "menupanel")
+					(get-extension "tampermonkey" "firefox@tampermonkey.net" false "menupanel")
 					# fine grained request management
 					(get-extension "umatrix" "uMatrix@raymondhill.net" false "navbar")
 					# show scholarly articles
@@ -111,25 +111,25 @@
 						nix-packages = {
 							name = "Nix package search";
 							urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
-							icon = "https://nixos.org/favicon.ico";
+							# icon = "https://nixos.org/favicon.ico";
 							definesAliases = [ "@np" ];
 						};
 						nix-options = {
 							name = "Nix option search";
 							urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
-							icon = "https://nixos.org/favicon.ico";
+							# icon = "https://nixos.org/favicon.ico";
 							definesAliases = [ "@no" ];
 						};
 						nixos-wiki = {
 							name = "NixOS wiki";
 							urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
-							icon = "https://wiki.nixos.org/favicon.ico";
+							# icon = "https://wiki.nixos.org/favicon.ico";
 							definesAliases = [ "@nw" ];
 						};
 						mynixos = {
 							name = "MyNixOS";
 							urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
-							icon = "https://mynixos.com/favicon.ico";
+							# icon = "https://mynixos.com/favicon.ico";
 							definesAliases = [ "@ns" ];
 						};
 					};

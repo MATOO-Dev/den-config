@@ -5,32 +5,9 @@
 
 	# configure vm config aspect
 	den.aspects.matoo-vm = {
-		# re-usable modules here
+		# system-specific modules
 		includes = [
-			# general
-
-			# system
-			den.aspects.audio
-			den.aspects.bluetooth
-			den.aspects.bootloader
-			den.aspects.email
-			den.aspects.firefox
-			den.aspects.fonts
-			den.aspects.gaming
-			den.aspects.input
-			den.aspects.kernel
-			den.aspects.locale
-			den.aspects.localsend
-			den.aspects.login
-			den.aspects.networking
-			den.aspects.niri
-			den.aspects.nix
-			den.aspects.printing
 			den.aspects.virtualization
-			den.aspects.extraPackages
-
-			# hardware
-			# den.aspects.vm-disk
 		];
 
 		# system settings

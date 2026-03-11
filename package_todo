@@ -28,14 +28,6 @@ zoxide # shells or similar aspect
 fish? # shells or similar
 zsh/zsh-autosuggestions/completions/syntax-hightlighting/vi-mode # shells or similar aspect
 
-######################
-#### double check ####
-######################
-
-localsend
-proton-mail
-thunderbird
-
 #############################
 #### needs configuration ####
 #############################

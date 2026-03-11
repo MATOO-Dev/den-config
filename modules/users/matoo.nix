@@ -22,6 +22,7 @@
 			den.aspects.kitty
 			den.aspects.niri
 			den.aspects.nix
+			den.aspects.shells
 		];
 
 		# general user config

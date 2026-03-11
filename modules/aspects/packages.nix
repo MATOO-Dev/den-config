@@ -2,6 +2,7 @@
 	den.aspects.extraPackages = {
 		nixos = { pkgs, ... }: {
 			environment.systemPackages = with pkgs; [
+				home-manager # manage home environment
 				vim # text editor
 			];
 		};

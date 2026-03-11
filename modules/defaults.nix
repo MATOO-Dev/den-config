@@ -15,16 +15,10 @@
 		};
 
 		nixos = {
-			includes = [
-
-			];
-
 			nixpkgs.config.allowUnfree = true;
 		};
 
 		homeManager = {
-			includes = [
-			];
 		};
 	};
 

@@ -4,12 +4,6 @@
 
 xpadneo-dkms? # gaming aspect
 
-##########################
-#### recording aspect ####
-##########################
-
-gpu-screen-recorder-ui # recording aspect
-
 ###########################
 #### notetaking aspect ####
 ###########################
@@ -33,12 +27,6 @@ waybar # shell or desktop aspect
 zoxide # shells or similar aspect
 fish? # shells or similar
 zsh/zsh-autosuggestions/completions/syntax-hightlighting/vi-mode # shells or similar aspect
-
-###############################
-#### virtualization aspect ####
-###############################
-
-virt-manager? # virtualization aspect
 
 ######################
 #### double check ####
@@ -74,3 +62,4 @@ fancontrol-gui? # might skip
 it87 (kernel module for fans)? # might skip
 ms-fonts? # might skip
 xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
+gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)

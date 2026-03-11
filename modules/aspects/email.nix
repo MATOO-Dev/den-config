@@ -11,7 +11,7 @@
 			];
 		};
 
-		homeMangager = { ... }: {
+		homeManager = { ... }: {
 			programs.thunderbird = {
 				enable = true;
 				# settings applied to all profiles

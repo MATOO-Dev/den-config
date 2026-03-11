@@ -12,6 +12,7 @@
 			# set login shell
 			(den.provides.user-shell "zsh")
 			# custom aspects
+			den.aspects.coding
 			den.aspects.discord
 			den.aspects.email
 			den.aspects.extraPackages

@@ -1,22 +1,4 @@
 #######################
-#### coding aspect ####
-#######################
-
-bacon
-clang
-clang-tools
-gdb (debugger)
-godot
-renderdoc
-rustlings
-valgrind
-assimp? (asset importer lib)
-cargo-deny?
-glad (opengl library?)
-qtcreator?
-scons?
-
-#######################
 #### gaming aspect ####
 #######################
 

@@ -53,6 +53,7 @@
 				# spotify # music app # also consider spicetify
 				tldr # simplified man pages
 				tree # print file tree
+				typst # typst compiler
 				unzip # unzipping from cli
 				vlc # video player
 				xournalpp # pdf annotation tool

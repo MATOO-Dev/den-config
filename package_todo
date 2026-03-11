@@ -4,12 +4,11 @@
 
 xpadneo-dkms? # gaming aspect
 
-###########################
-#### notetaking aspect ####
-###########################
+#########################
+#### obsidian aspect ####
+#########################
 
 obsidian # notetaking or obsidian aspect
-typst # notetaking or typst aspect
 
 ########################
 #### backups aspect ####
@@ -23,10 +22,6 @@ timeshift-autosnap # backups aspect
 ######################
 
 rmtrash # possibly shell aspect?
-waybar # shell or desktop aspect
-zoxide # shells or similar aspect
-fish? # shells or similar
-zsh/zsh-autosuggestions/completions/syntax-hightlighting/vi-mode # shells or similar aspect
 
 #############################
 #### needs configuration ####
@@ -48,10 +43,22 @@ neovim # nvim aspect or nvf or nixcats
 ###############
 
 sticker-convert? # not packaged
+ms-fonts? # might skip
+xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
+gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
+
+##################
+#### hardware ####
+##################
+
 coolercontrol? # might skip
 corectrl? # might skip
 fancontrol-gui? # might skip
 it87 (kernel module for fans)? # might skip
-ms-fonts? # might skip
-xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
-gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
+
+
+################
+#### chores ####
+################
+
+port existing dotfiles

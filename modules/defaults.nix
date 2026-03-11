@@ -1,4 +1,4 @@
-{ inputs, ... }: 
+{ inputs, den, ... }: 
 {
 	imports = [ inputs.den.flakeModule ];
 
@@ -16,7 +16,7 @@
 			];
 		};
 
-		nixos = { den, ... }: {
+		nixos = {
 			nixpkgs.config.allowUnfree = true;
 			imports = [
 				den.aspects.audio
@@ -40,7 +40,7 @@
 
 		};
 
-		homeManager = { den, ... }: {
+		homeManager = {
 			imports = [
 				den.aspects.email
 				den.aspects.extraPackages

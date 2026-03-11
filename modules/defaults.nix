@@ -10,46 +10,40 @@
 		# nixos.system.stateVersion = "25.11";
 		# homeManager.home.stateVersion = "25.11";
 
-		user = {
-			imports = [
-
-			];
-		};
-
-		nixos = {
+		nixos = den.lib.parametric {
 			nixpkgs.config.allowUnfree = true;
-			imports = [
-				den.aspects.audio
-				den.aspects.bluetooth
-				den.aspects.bootloader
-				den.aspects.email
-				den.aspects.extraPackages
-				den.aspects.firefox
-				den.aspects.fonts
-				den.aspects.gaming
-				den.aspects.input
-				den.aspects.kernel
-				den.aspects.locale
-				den.aspects.localsend
-				den.aspects.login
-				den.aspects.networking
-				den.aspects.niri
-				den.aspects.nix
-				den.aspects.printing
+			imports = with den.aspects; [
+				audio
+				bluetooth
+				bootloader
+				email
+				extraPackages
+				firefox
+				fonts
+				gaming
+				input
+				kernel
+				locale
+				localsend
+				login
+				networking
+				niri
+				nix
+				printing
 			];
 
 		};
 
-		homeManager = {
-			imports = [
-				den.aspects.email
-				den.aspects.extraPackages
-				den.aspects.firefox
-				den.aspects.git
-				den.aspects.hyprland
-				den.aspects.kitty
-				den.aspects.niri
-				den.aspects.nix
+		homeManager = den.lib.parametric {
+			imports = with den.aspects; [
+				email
+				extraPackages
+				firefox
+				git
+				hyprland
+				kitty
+				niri
+				nix
 			];
 		};
 	};

@@ -17,13 +17,6 @@ gpu-screen-recorder-ui # recording aspect
 obsidian # notetaking or obsidian aspect
 typst # notetaking or typst aspect
 
-####################
-#### vpn aspect ####
-####################
-
-proton-vpn # vpn aspect
-openfortivpn? # vpn aspect
-
 ########################
 #### backups aspect ####
 ########################
@@ -64,28 +57,20 @@ syncthing # needs configuration
 vicinae? (app launcher) # needs configuration
 hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # needs configuration
 
-####################
-#### might skip ####
-####################
-
-coolercontrol? # might skip
-corectrl? # might skip
-fancontrol-gui? # might skip
-it87 (kernel module for fans)? # might skip
-ms-fonts? # might skip
-xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
-
 ###############################
 #### configured separately ####
 ###############################
 
 neovim # nvim aspect or nvf or nixcats
 
-
 ###############
 #### other ####
 ###############
 
-proton-authenticator # password or security aspect?
-scrcpy # might need firewall
 sticker-convert? # not packaged
+coolercontrol? # might skip
+corectrl? # might skip
+fancontrol-gui? # might skip
+it87 (kernel module for fans)? # might skip
+ms-fonts? # might skip
+xdg-desktop-portal-gtk/hyprland/wlr # might not be needed

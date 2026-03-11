@@ -39,12 +39,16 @@
 				nautilus # file browser
 				numbat # scientific calculation lang
 				# onlyoffice-bin # office suite
+				openfortivpn # vpn client
 				pandoc # document converter
 				pdfarranger # reorder and merge pdfs
 				pdfpc # pdf presentation presenter
 				pixieditor # image editor
+				proton-authenticator # 2FA code generator
 				# protonplus # proton version manager
+				protonvpn-gui # vpn client
 				ripgrep # grep through files
+				scrcpy # mirror android to pc
 				signal-desktop # messaging app
 				# spotify # music app # also consider spicetify
 				tldr # simplified man pages

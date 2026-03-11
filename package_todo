@@ -22,20 +22,6 @@ scons?
 
 xpadneo-dkms? # gaming aspect
 
-########################
-#### browser aspect ####
-########################
-
-chromium # browser aspect
-firefox # browser aspect
-
-########################
-#### discord aspect ####
-########################
-
-discord/vencord/vesktop # discord aspect
-discover-overlay # discord aspect
-
 ##########################
 #### recording aspect ####
 ##########################

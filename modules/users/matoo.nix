@@ -11,6 +11,16 @@
 			den.provides.primary-user
 			# set login shell
 			(den.provides.user-shell "zsh")
+			# custom aspects
+			den.aspects.discord
+			den.aspects.email
+			den.aspects.extraPackages
+			den.aspects.firefox
+			den.aspects.git
+			den.aspects.hyprland
+			den.aspects.kitty
+			den.aspects.niri
+			den.aspects.nix
 		];
 
 		# general user config

@@ -20,7 +20,11 @@
 				};
 			};
 
+			# optimize system performance for gaming
 			programs.gamemode.enable = true;
+
+			# xbox controller drive
+			hardware.xpadneo.enable = true;
 		};
 
 		# todo: consider moving this to pkgs-unstable

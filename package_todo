@@ -1,9 +1,3 @@
-#######################
-#### gaming aspect ####
-#######################
-
-xpadneo-dkms? # gaming aspect
-
 ########################
 #### backups aspect ####
 ########################
@@ -27,7 +21,6 @@ neovim # nvim aspect or nvf or nixcats
 ###############
 
 sticker-convert? # not packaged
-ms-fonts? # might skip
 xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
 gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 

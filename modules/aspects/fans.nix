@@ -1,5 +1,5 @@
 {
-	den.aspect.fans = {
+	den.aspects.fans = {
 		nixos = { pkgs, ... }: {
 			boot.extraModulePackages = [
 				# todo: find a way to automatically update this to the most recent kernel

@@ -50,7 +50,7 @@
 				};
 			};
 
-			vaults.computer_science = {
+			vaults."computer_science" = {
 				enable = true;
 				target = "computer_science";
 			};

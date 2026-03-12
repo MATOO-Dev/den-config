@@ -9,7 +9,6 @@
 		# extra features
 		home-manager.url = "github:nix-community/home-manager/release-25.11";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
-		# nvim.url = "github:matoo-dev/nixcats-conf";
 		# impermanence.url = "github:nix-community/impermanence";
 
 		# config architecture
@@ -23,6 +22,10 @@
 		disko.url = "github:nix-community/disko";
 		disko.inputs.nixpkgs.follows = "nixpkgs";
 		# lanzaboote.url = "github:nix-community/lanzaboote";
+
+		# custom flakes
+		neovim.url = "github:matoo-dev/nixcats-config";
+		neovim.inputs.nixpkgs.follows = "nixpkgs";
 	};
 
 	outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

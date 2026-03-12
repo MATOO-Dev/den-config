@@ -20,9 +20,10 @@
 			den.aspects.git
 			den.aspects.hyprland
 			den.aspects.kitty
+			den.aspects.neovim
 			den.aspects.niri
 			den.aspects.nix
-			den.aspects.obsidian
+			# den.aspects.obsidian
 			den.aspects.shells
 		];
 

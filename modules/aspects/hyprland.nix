@@ -5,7 +5,7 @@
 		};
 
 		homeManager = { config, ... }: {
-			wayland.windowmanager.hyprland = {
+			wayland.windowManager.hyprland = {
 				enable = true;
 				xwayland.enable = true;
 				settings = {
@@ -185,14 +185,14 @@
 						"$mainMod, mouse:273, resizewindow"
 						", Pause, pass, class:^(discord)$"
 						"$mainMod, Print, exec, hyprshot -m region"
-					] ++ (
-							builtins.concatLists(builtins.genList (i:
-								[
-									"$mainMod, ${toString i}, exec, hyprctl dispatch workspace $(hyprctl activeworkspace -j | jq 'if .id > 5 then ${toString i+5} else ${toString i} end')"
-									"$mainMod, shift, ${toString i}, exec, hyprctl dispatch movetoworkspace $(hyprctl activeworkspace -j | jq 'if .id > 5 then ${toString i+5} else ${toString i} end')"
-								]
-							))
-						);
+					]; # ++ (
+						# 	builtins.concatLists(builtins.genList (i:
+						# 		[
+						# 			"$mainMod, ${toString i}, exec, hyprctl dispatch workspace $(hyprctl activeworkspace -j | jq 'if .id > 5 then ${toString i+5} else ${toString i} end')"
+						# 			"$mainMod, shift, ${toString i}, exec, hyprctl dispatch movetoworkspace $(hyprctl activeworkspace -j | jq 'if .id > 5 then ${toString i+5} else ${toString i} end')"
+						# 		]
+						# 	))
+						# );
 
 					bindel = [
 						",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"

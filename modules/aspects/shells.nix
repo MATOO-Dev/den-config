@@ -8,6 +8,7 @@ let
 		ls = "ls --color";
 		clear = "printf '\\033[2J\\033[3J\\033[1;1H'"; # clears scrollback buffer as well
 		rm = "rmtrash";
+		rmdir = "rmdirtrash";
 		gitreset = "git reset --hard origin/main";
 		buildHome = "home-manager switch --flake ~/den-config/flake.nix#matoo";
 	};
@@ -79,6 +80,10 @@ in
 				enableFishIntegration = true;
 				options = [ "--cmd j" ];
 			};
+
+			home.packages = with pkgs; [
+				rmtrash
+			];
 		};
 	};
 }

@@ -17,12 +17,6 @@ obsidian # notetaking or obsidian aspect
 timeshift/snapper # backups aspect
 timeshift-autosnap # backups aspect
 
-######################
-#### shell aspect ####
-######################
-
-rmtrash # possibly shell aspect?
-
 #############################
 #### needs configuration ####
 #############################

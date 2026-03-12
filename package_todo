@@ -4,7 +4,6 @@
 
 obsidian # set up vaults
 syncthing # devices and folders
-sherlock-launcher # port configuration
 hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # complete the config
 neovim # currently nixcats alias, consider nvf
 

@@ -5,7 +5,6 @@
 obsidian # set up vaults
 syncthing # devices and folders
 hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # complete the config
-neovim # currently nixcats alias, consider nvf
 
 ###############
 #### other ####
@@ -20,19 +19,10 @@ gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 ################
 
 port existing dotfiles:
-- gammastep
-- gpu screen recorder
-- kanata
-- kde
-- kitty
-- mpv
-- niri
-- nvim
-- scripts
-- sherlock
+- gammastep / systemd # link existing dotfile
+- gpu screen recorder # link existing dotfile
+- kanata # link existing dotfile
+- nvim # currently nixcats alias, consider nvf
+- sherlock # figure out syntax
 - starship
-- stow
-- systemd
 - waybar
-- yazi
-- zsh

@@ -12,6 +12,7 @@
 			# set login shell
 			(den.provides.user-shell "fish")
 			# custom aspects
+			den.aspects.bar
 			den.aspects.coding
 			den.aspects.discord
 			den.aspects.email

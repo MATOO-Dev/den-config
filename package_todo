@@ -9,18 +9,17 @@ timeshift-autosnap # backups aspect
 #### needs configuration ####
 #############################
 
-obsidian # notetaking or obsidian aspect
-sherlock-launcher # needs configuration
-syncthing # needs configuration
-vicinae? (app launcher) # needs configuration
-hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # needs configuration
-neovim # nvim aspect or nvf or nixcats
+obsidian # obsidian aspect
+sherlock-launcher # port configuration
+hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # complete the config
+neovim # currently nixcats alias, consider nvf
 
 ###############
 #### other ####
 ###############
 
 sticker-convert? # not packaged
+vicinae? (app launcher) # might skip
 xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
 gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 

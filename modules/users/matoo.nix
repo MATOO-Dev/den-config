@@ -25,6 +25,7 @@
 			den.aspects.nix
 			# den.aspects.obsidian
 			den.aspects.shells
+			den.aspects.syncthing
 		];
 
 		# general user config

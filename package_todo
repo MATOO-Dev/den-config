@@ -19,4 +19,20 @@ gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 #### chores ####
 ################
 
-port existing dotfiles
+port existing dotfiles:
+- gammastep
+- gpu screen recorder
+- kanata
+- kde
+- kitty
+- mpv
+- niri
+- nvim
+- scripts
+- sherlock
+- starship
+- stow
+- systemd
+- waybar
+- yazi
+- zsh

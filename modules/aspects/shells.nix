@@ -1,6 +1,8 @@
 let
 	shell-aliases = {
-		nv = "nvim";
+		# nv = "nvim";
+		nv = "nix run github:matoo-dev/nicats-config";
+		nvim = "nix run github:matoo-dev/nicats-config";
 		laz = "lazygit";
 		open = "xdg-open";
 		ls = "ls --color";

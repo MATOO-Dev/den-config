@@ -1,6 +1,6 @@
 { inputs, ... }:
 let
-	primary_disk_path = "";
+	primary_disk_path = "/dev/disk/by-uuid/???";
 	mount_options = [
 		"compress=zstd:3" # automatic file compression if possible
 		"discard=async" # stagger discards to improve i/o
@@ -10,7 +10,7 @@ let
 	];
 in
 {
-	den.aspects.laptop-disk.nixos = { ... }: {
+	den.aspects.matoo-laptop.nixos = { ... }: {
 		imports = [
 			inputs.disko.nixosModules.default
 		];

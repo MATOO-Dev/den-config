@@ -24,5 +24,4 @@ port existing dotfiles:
 - kanata # link existing dotfile
 - nvim # currently nixcats alias, consider nvf
 - sherlock # figure out syntax
-- starship
-- waybar
+- starship # port config, possibly merge with old

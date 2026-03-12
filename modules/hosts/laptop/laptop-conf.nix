@@ -1,10 +1,10 @@
 { den, ... }:
 {
 	# define vm config aspect + user aspect
-	den.hosts.x86_64-linux.matoo-vm.users.matoo = {};
+	den.hosts.x86_64-linux.matoo-laptop.users.matoo = {};
 
 	# configure vm config aspect
-	den.aspects.matoo-vm = {
+	den.aspects.matoo-laptop = {
 		# re-usable modules here
 		includes = [
 			# general
@@ -28,16 +28,17 @@
 			den.aspects.nix
 			den.aspects.printing
 			den.aspects.snapshots
-			den.aspects.virtualization
 
 			# hardware
+			den.aspects.fingerprint
+			den.aspects.powersave
 			# den.aspects.vm-disk
 		];
 
 		# system settings
 		nixos = { pkgs, ... }:
 		{
-			networking.hostName = "matoo-vm";
+			networking.hostName = "matoo-laptop";
 
 			# hardware config
 			boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];

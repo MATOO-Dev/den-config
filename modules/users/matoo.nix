@@ -10,7 +10,7 @@
 			# set wheel/networkmanager groups
 			den.provides.primary-user
 			# set login shell
-			(den.provides.user-shell "zsh")
+			(den.provides.user-shell "fish")
 			# custom aspects
 			den.aspects.coding
 			den.aspects.discord

@@ -47,9 +47,9 @@ ms-fonts? # might skip
 xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
 gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 
-##################
-#### hardware ####
-##################
+##############
+#### fans ####
+##############
 
 coolercontrol? # might skip
 corectrl? # might skip

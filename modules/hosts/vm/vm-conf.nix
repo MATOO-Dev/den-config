@@ -27,6 +27,7 @@
 			den.aspects.niri
 			den.aspects.nix
 			den.aspects.printing
+			den.aspects.snapshots
 			den.aspects.virtualization
 
 			# hardware

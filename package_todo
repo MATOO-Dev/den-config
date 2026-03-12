@@ -4,12 +4,6 @@
 
 xpadneo-dkms? # gaming aspect
 
-#########################
-#### obsidian aspect ####
-#########################
-
-obsidian # notetaking or obsidian aspect
-
 ########################
 #### backups aspect ####
 ########################
@@ -21,15 +15,11 @@ timeshift-autosnap # backups aspect
 #### needs configuration ####
 #############################
 
+obsidian # notetaking or obsidian aspect
 sherlock-launcher # needs configuration
 syncthing # needs configuration
 vicinae? (app launcher) # needs configuration
 hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # needs configuration
-
-###############################
-#### configured separately ####
-###############################
-
 neovim # nvim aspect or nvf or nixcats
 
 ###############
@@ -40,16 +30,6 @@ sticker-convert? # not packaged
 ms-fonts? # might skip
 xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
 gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
-
-##############
-#### fans ####
-##############
-
-coolercontrol? # might skip
-corectrl? # might skip
-fancontrol-gui? # might skip
-it87 (kernel module for fans)? # might skip
-
 
 ################
 #### chores ####

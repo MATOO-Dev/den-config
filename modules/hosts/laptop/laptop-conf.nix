@@ -32,6 +32,7 @@
 			# hardware
 			den.aspects.fingerprint
 			den.aspects.powersave
+			den.aspects.kanata
 			# den.aspects.vm-disk
 		];
 

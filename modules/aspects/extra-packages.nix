@@ -1,7 +1,9 @@
 {
 	den.aspects.extraPackages = {
 		nixos = { pkgs, ... }: {
+			# make sure these are always installed
 			environment.systemPackages = with pkgs; [
+				git # version control
 				home-manager # manage home environment
 				vim # text editor
 			];

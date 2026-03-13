@@ -31,7 +31,6 @@
 					"[](bg:theme0c fg:theme0b)"
 					"$git_status"
 					"[](fg:theme0c)"
-					"\\u0020"
 				];
 
 				right_format = lib.strings.concatStrings [
@@ -45,12 +44,12 @@
 				os = {
 					disabled = false;
 					format = "[ $symbol ](bg:theme09 fg:theme01)";
-					symbols = " ";
+					symbols.NixOS = " ";
 				};
 
 				directory = {
 					disabled = false;
-					format = " [ $path ](bg:theme0a fg:theme01)";
+					format = "[ $path ](bg:theme0a fg:theme01)";
 					truncation_length = 1;
 					truncation_symbol = "../";
 					substitutions = {

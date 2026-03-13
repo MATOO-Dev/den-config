@@ -31,7 +31,7 @@
 			den.aspects.virtualization
 
 			# hardware
-			# den.aspects.vm-disk
+			den.aspects.vm-disk
 		];
 
 		# system settings

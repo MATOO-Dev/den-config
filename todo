@@ -1,0 +1,30 @@
+################
+#### chores ####
+################
+
+obsidian # set up vaults and plugins using nix
+syncthing # set up devices and folders using nix
+gammastep / systemd # might skip, link existing dotfile
+gpu screen recorder # link existing dotfile or make a script
+kanata # link existing dotfile
+nvim # currently nixcats alias, consider nvf
+sherlock # link existing dotfiles
+thunderbird # declare plugins and settings
+firefox # declare plugins and settings
+snapper # setup snapshot config
+boot # partition security hole research
+backups # create subvolume in disko
+
+######################
+#### cant install ####
+######################
+
+sticker-convert? # not packaged, but not important
+gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
+
+###################
+#### long term ####
+###################
+
+secure boot # using lanzaboote
+impermanence # research this

@@ -33,7 +33,7 @@
 		];
 
 		# general user config
-		user = { pkgs, ... }: {
+		user = { ... }: {
 			isNormalUser = true;
 			description = "MATOO";
 			extraGroups = [ ];

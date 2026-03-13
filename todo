@@ -17,7 +17,7 @@ backups # create subvolume in disko
 ######################
 
 sticker-convert? # not packaged, but not important
-gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
+gpu-screen-recorder-ui # stuck in pr limbo
 
 ###################
 #### long term ####
@@ -25,3 +25,4 @@ gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 
 secure boot # using lanzaboote
 impermanence # not sure whether i'll use this
+sops # secrets management

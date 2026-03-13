@@ -17,6 +17,7 @@
 				audacity # audio editor
 				blender # 3d modeling
 				chromium # backup browser, main is firefox
+				denaro # personal finance tracker
 				# dolphin # file browser
 				drawio # diagram maker
 				# easytag # media metadata editor

@@ -4,7 +4,16 @@
 			programs.hyprland.enable = true;
 		};
 
-		homeManager = { config, ... }: {
+		homeManager = { config, pkgs, ... }: {
+			home.packages = with pkgs; [
+				hyprcursor
+				hyprpicker
+				hyprpolkitagent
+				hyprshot
+				xdg-desktop-portal-hyprland
+				xdg-desktop-portal-wlr
+			];
+
 			services.hypridle = {
 				enable = true;
 				settings = {

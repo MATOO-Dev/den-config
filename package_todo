@@ -1,15 +1,8 @@
-#############################
-#### needs configuration ####
-#############################
-
-hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # complete the config
-
 ###############
 #### other ####
 ###############
 
 sticker-convert? # not packaged
-xdg-desktop-portal-gtk/hyprland/wlr # might not be needed
 gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 
 ################

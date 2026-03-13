@@ -31,6 +31,7 @@
 					"[](bg:theme0c fg:theme0b)"
 					"$git_status"
 					"[](fg:theme0c)"
+					" "
 				];
 
 				right_format = lib.strings.concatStrings [

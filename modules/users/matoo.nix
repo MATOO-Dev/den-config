@@ -26,6 +26,7 @@
 			den.aspects.niri
 			den.aspects.nix
 			# den.aspects.obsidian
+			den.aspects.prompt
 			den.aspects.shells
 			den.aspects.snapshots
 			den.aspects.syncthing

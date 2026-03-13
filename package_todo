@@ -2,8 +2,6 @@
 #### needs configuration ####
 #############################
 
-obsidian # set up vaults
-syncthing # devices and folders
 hyprland/idle/lock/picker/shot/sunset/cursor/grpahics/polkitagent # complete the config
 
 ###############
@@ -19,9 +17,10 @@ gpu-screen-recorder-ui # recording aspect (stuck in pr limbo)
 ################
 
 port existing dotfiles:
+- obsidian # set up vaults
+- syncthing # devices and folders
 - gammastep / systemd # link existing dotfile
 - gpu screen recorder # link existing dotfile
 - kanata # link existing dotfile
 - nvim # currently nixcats alias, consider nvf
 - sherlock # figure out syntax
-- starship # port config, possibly merge with old

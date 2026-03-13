@@ -71,6 +71,9 @@ in
 				# offer autocompletion from man pages
 				generateCompletions = true;
 				shellAbbrs = shell-aliases;
+				interactiveShellInit = ''
+					set fish_greeting # disable greeting
+				'';
 			};
 
 			programs.zoxide = {

@@ -10,7 +10,6 @@ sherlock # link existing dotfiles
 thunderbird # declare plugins and settings
 firefox # declare plugins and settings
 snapper # setup snapshot config
-boot # partition security hole research
 backups # create subvolume in disko
 
 ######################

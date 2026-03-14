@@ -4,9 +4,7 @@
 
 obsidian # set up vaults and plugins using nix
 syncthing # set up devices and folders using nix
-gpu screen recorder # link existing dotfile or make a script
 nvim # currently nixcats alias, consider nvf
-sherlock # link existing dotfiles
 thunderbird # declare plugins and settings
 firefox # declare plugins and settings
 snapper # setup snapshot config

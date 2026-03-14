@@ -53,7 +53,7 @@ in
 					src = pkgs.zsh-autosuggestions;
 					file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
 				}];
-				initExtra = ''
+				initContent = ''
 					# case-insensitive autocompletion
 					zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 					# enable ls colors for autocompletion

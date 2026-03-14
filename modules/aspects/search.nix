@@ -3,9 +3,8 @@
 		programs.sherlock = {
 			enable = true;
 			settings = {
-				max_results = 8;
+				max_results = 6;
 				theme = "dark";
-				width = 500;
 			};
 		};
 	};

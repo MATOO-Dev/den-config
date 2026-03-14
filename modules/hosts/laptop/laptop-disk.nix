@@ -24,13 +24,6 @@ in
                     content = {
                         type = "gpt";
                         partitions = {
-                            # apprently optional, esp is required
-                            boot = {
-                                name = "boot";
-                                size = "1M";
-                                type = "EF02";
-                            };
-                            # esp = efi system partition
                             esp = {
                                 name = "ESP";
                                 size = "1G";
@@ -39,6 +32,7 @@ in
                                     type = "filesystem";
                                     format = "vfat";
                                     mountpoint = "/boot";
+									mountOptions = [ "umask=00777" ];
                                 };
                             };
                             encrypedSwap = {
@@ -86,6 +80,10 @@ in
                                             };
                                             "@tmp" = {
                                                 mountpoint = "/tmp";
+                                                mountOptions = mount_options;
+                                            };
+                                            "@backups" = {
+                                                mountpoint = "/backups";
                                                 mountOptions = mount_options;
                                             };
                                         };

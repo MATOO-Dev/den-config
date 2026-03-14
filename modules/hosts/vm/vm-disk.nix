@@ -60,30 +60,34 @@ in
                                         type = "btrfs";
                                         extraArgs = [ "-f" ];
                                         subvolumes = {
-                                            "/" = {
+                                            "@" = {
                                                 mountpoint = "/";
                                                 mountOptions = mount_options;
                                             };
-                                            "/home" = {
+                                            "@home" = {
                                                 mountpoint = "/home";
                                                 mountOptions = mount_options;
                                             };
-                                            "/nix" = {
+                                            "@nix" = {
                                                 mountpoint = "/nix";
                                                 mountOptions = mount_options;
                                             };
-                                            # "@var_log" = {
-                                            #     mountpoint = "/var/log";
-                                            #     mountOptions = mount_options;
-                                            # };
-                                            # "@snapshots" = {
-                                            #     mountpoint = "/.snapshots";
-                                            #     mountOptions = mount_options;
-                                            # };
-                                            # "@tmp" = {
-                                            #     mountpoint = "/tmp";
-                                            #     mountOptions = mount_options;
-                                            # };
+                                            "@var_log" = {
+                                                mountpoint = "/var/log";
+                                                mountOptions = mount_options;
+                                            };
+                                            "@snapshots" = {
+                                                mountpoint = "/.snapshots";
+                                                mountOptions = mount_options;
+                                            };
+                                            "@tmp" = {
+                                                mountpoint = "/tmp";
+                                                mountOptions = mount_options;
+                                            };
+                                            "@backups" = {
+                                                mountpoint = "/backups";
+                                                mountOptions = mount_options;
+                                            };
                                         };
                                     };
                                 };

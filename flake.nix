@@ -13,10 +13,10 @@
 
 		# config architecture
 		# allfollow.url = "github:spikespaz/allfollow";
-		den.url = "github:vic/den";
-		flake-aspects.url = "github:vic/flake-aspects";
+		den.url = "github:vic/den/latest";
+		flake-aspects.url = "github:vic/flake-aspects/latest";
 		flake-parts.url = "github:hercules-ci/flake-parts";
-		import-tree.url = "github:vic/import-tree";
+		import-tree.url = "github:vic/import-tree/latest";
 
 		# hardware
 		disko.url = "github:nix-community/disko";

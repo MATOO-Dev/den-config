@@ -9,12 +9,4 @@
 		default = {};
 		description = "Custom disk configuration";
 	};
-
-	config = {
-		debug = true;
-
-		systems = [
-			"x86_64-linux"
-		];
-	};
 }

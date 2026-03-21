@@ -1,18 +1,15 @@
 { den, lib, inputs, ... }:
 {
 	# define a vim class that forwards 'vim' to 'nvf.config.vim'
-	# den.aspects.vimClass = { aspect-chain }:
-	# 	den.provides.forward {
-	# 		each = lib.singleton true;
-	# 		fromClass = _: "vim";
-	# 		intoClass = _: "nvf";
-	# 		intoPath = _: [
-	# 			"config"
-	# 			"vim"
-	# 		];
-	# 		fromAspect = _: lib.head aspect-chain;
-	# 		adaptArgs = lib.id;
-	# 	};
+	den.aspects.vimClass = { aspect-chain, ... }: 
+		den.provides.forward {
+			each = lib.singleton true;
+			fromClass = _: "vim";
+			intoClass = _: "nvf";
+			intoPath = _: [ "vim" ];
+			fromAspect = _: lib.head aspect-chain;
+			adaptArgs = lib.id;
+		};
 
 	# definition for full nvim config
 	den.aspects.nvim-full = {
@@ -36,26 +33,11 @@
 		vim.theme.style = "frappe";
 	};
 
-	den.lib.nvf.package = pkgs: vimAspect: ctx:
-		(inputs.nvf.lib.neovimConfiguration {
-			inherit pkgs;
-			modules = [ (den.lib.nvf.module vimAspect ctx) ];
-		}).neovim;
-
 	den.lib.nvf.module = vimAspect: ctx:
 	let
-		vimClass = { aspect-chain, ... }: 
-			den.provides.forward {
-				each = lib.singleton true;
-				fromClass = _: "vim";
-				intoClass = _: "nvf";
-				intoPath = _: [ "vim" ];
-				fromAspect = _: lib.head aspect-chain;
-				adaptArgs = lib.id;
-			};
 		aspect = den.lib.parametric.fixedTo ctx {
 			includes = [
-			vimClass
+			den.aspects.vimClass
 			vimAspect
 		];
 		};

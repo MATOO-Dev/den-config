@@ -14,6 +14,7 @@
 				renderdoc # graphics programming debugger
 				rustlings # rust beginner exercises
 				scons # c++ meta build tool
+				unityhub # game engine
 				valgrind # c++ memory profiler
 			];
 		};

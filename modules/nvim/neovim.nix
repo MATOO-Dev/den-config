@@ -11,39 +11,33 @@
 			adaptArgs = lib.id;
 		};
 
-	# workaround for namespace collision between nvf.vim.options and nix.<module>.options
-	den.aspects.vimOptsFwd.nvf = _: {
-		imports = [ (lib.mkAliasOptionModule [ "vim" "opt" ] [ "vim" "options" ]) ];
-	};
-
 	# definition for full nvim config
 	den.aspects.nvim-full = {
 		includes = [
 			den.aspects.vimClass
-			den.aspects.vimOptsFwd
 			# import all aspects here
-			den.aspects.vimOpts
+			den.aspects.vimOptions
+			den.aspects.vimTheme
+			den.aspects.vimLanguages
+			den.aspects.vimKeymaps
+			den.aspects.vimNavigation
+			den.aspects.vimVisuals
+			den.aspects.vimAutocomplete
+			den.aspects.vimGit
+			den.aspects.vimDiagnostics
+			den.aspects.vimTyping
 		];
-
-		# example options
-		vim.theme.enable = true;
-		vim.theme.name = "catppuccin";
-		vim.theme.style = "frappe";
 	};
 
 	# definition for small nvim config
 	den.aspects.nvim-small = {
 		includes = [
 			den.aspects.vimClass
-			den.aspects.vimOptsFwd
 			# import only some aspects here
-			den.aspects.vimOpts
+			den.aspects.vimOptions
+			den.aspects.vimKeymaps
+			den.aspects.vimNavigation
 		];
-
-		# more example options
-		vim.theme.enable = true;
-		vim.theme.name = "gruvbox";
-		vim.theme.style = "dark";
 	};
 
 	# expose packages to all system types defined in flake

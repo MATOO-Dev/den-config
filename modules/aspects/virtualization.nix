@@ -11,6 +11,7 @@
 
 		# for future hosts
 		# virtualisation.libvirtd.enable = true;
+		# programs.virt-manager.enable = true;
 		# boot.kernelModules = [ "kvm-amd" ];
 	};
 }

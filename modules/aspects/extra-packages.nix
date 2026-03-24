@@ -26,6 +26,7 @@
 				evince # gnome pdf viewer
 				fastfetch # fetch application
 				ffmpeg # media transcoder
+				filelight # disk usage analyzer
 				foliate # ebook reader
 				gimp # image editor
 				gnome-obfuscate # information censor

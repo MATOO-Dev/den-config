@@ -28,14 +28,13 @@
 			den.aspects.nix
 			den.aspects.printing
 			den.aspects.snapshots
-			den.aspects.virtualization
 
 			# hardware
 			den.aspects.vm-disk
 		];
 
 		# system settings
-		nixos = { pkgs, ... }:
+		nixos = { ... }:
 		{
 			networking.hostName = "matoo-vm";
 
@@ -45,6 +44,14 @@
 			boot.kernelModules = [ "kvm-amd" ];
 			boot.extraModulePackages = [];
 			nixpkgs.hostPlatform = "x86_64-linux";
+
+			# vm guest config
+			services = {
+				qemuGuest.enable = true;
+				spice-vdagentd.enable = true;
+				xserver.enable = true;
+				xserver.videoDrivers = ["virtio"];
+			};
 		};
 
 		# home settings for all users on this system

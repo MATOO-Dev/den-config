@@ -28,16 +28,17 @@
 			den.aspects.nix
 			den.aspects.printing
 			den.aspects.snapshots
+			den.aspects.virtualization
 
 			# hardware
 			den.aspects.fingerprint
 			den.aspects.powersave
 			den.aspects.kanata
-			# den.aspects.vm-disk
+			den.aspects.laptop-disk
 		];
 
 		# system settings
-		nixos = { pkgs, ... }:
+		nixos = { ... }:
 		{
 			networking.hostName = "matoo-laptop";
 

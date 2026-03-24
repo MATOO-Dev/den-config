@@ -84,10 +84,7 @@ in
                                                 mountpoint = "/tmp";
                                                 mountOptions = mount_options;
                                             };
-                                            "@backups" = {
-                                                mountpoint = "/backups";
-                                                mountOptions = mount_options;
-                                            };
+											# on vm @games is omitted
                                         };
                                     };
                                 };

@@ -10,7 +10,7 @@ let
 	];
 in
 {
-	den.aspects.matoo-laptop.nixos = { ... }: {
+	den.aspects.laptop-disk.nixos = { ... }: {
 		imports = [
 			inputs.disko.nixosModules.default
 		];
@@ -82,10 +82,11 @@ in
                                                 mountpoint = "/tmp";
                                                 mountOptions = mount_options;
                                             };
-                                            "@backups" = {
-                                                mountpoint = "/backups";
-                                                mountOptions = mount_options;
-                                            };
+											# on laptop this is on primary disk
+											"@games" = {
+												mountpoint = "/home/matoo/Games";
+												mountOptions = mount_options;
+											};
                                         };
                                     };
                                 };

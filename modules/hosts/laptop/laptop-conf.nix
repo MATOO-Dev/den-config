@@ -33,7 +33,7 @@
 			# hardware
 			# den.aspects.fingerprint
 			# den.aspects.powersave
-			den.aspects.kanata
+			# den.aspects.kanata
 			den.aspects.laptop-disk
 		];
 

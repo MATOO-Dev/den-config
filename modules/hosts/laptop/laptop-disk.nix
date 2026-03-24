@@ -1,6 +1,7 @@
 { inputs, ... }:
 let
-	primary_disk_path = "/dev/disk/by-uuid/7E31-AFDD";
+	# laptop only has one disk, so use device path rather than uuid
+	primary_disk_path = "/dev/nvme0n1";
 	mount_options = [
 		"compress=zstd:3" # automatic file compression if possible
 		"discard=async" # stagger discards to improve i/o

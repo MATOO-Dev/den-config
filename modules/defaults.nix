@@ -7,8 +7,8 @@
 	};
 
 	den.default = {
-		nixos.system.stateVersion = "25.11";
-		homeManager.home.stateVersion = "25.11";
+		nixos.system.stateVersion = "26.05";
+		homeManager.home.stateVersion = "26.05";
 
 		user = {
 

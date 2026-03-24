@@ -52,7 +52,6 @@
 			home = {
 				username = "matoo";
 				homeDirectory = "/home/matoo";
-				stateVersion = "25.11";
 
 				packages = with pkgs; [
 					kitty

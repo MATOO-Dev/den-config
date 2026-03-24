@@ -26,13 +26,13 @@
 				evince # gnome pdf viewer
 				fastfetch # fetch application
 				ffmpeg # media transcoder
-				filelight # disk usage analyzer
 				foliate # ebook reader
 				gimp # image editor
 				gnome-obfuscate # information censor
 				# gnuplot # graph plotting
 				handbrake # ffmpeg frontend
 				identity # media comparer
+				kdePackages.filelight # disk usage analyzer
 				kdePackages.kdenlive # video editor
 				kdePackages.kolourpaint # paint scribbles
 				kdePackages.kruler # measuring tool

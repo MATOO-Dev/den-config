@@ -1,6 +1,6 @@
 { inputs, ... }:
 let
-	primary_disk_path = "/dev/disk/by-uuid/???";
+	primary_disk_path = "/dev/disk/by-uuid/7E31-AFDD";
 	mount_options = [
 		"compress=zstd:3" # automatic file compression if possible
 		"discard=async" # stagger discards to improve i/o

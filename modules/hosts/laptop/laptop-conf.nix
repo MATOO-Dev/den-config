@@ -38,7 +38,7 @@
 		];
 
 		# system settings
-		nixos = { config, ... }:
+		nixos = { config, lib, ... }:
 		{
 			networking.hostName = "matoo-laptop";
 
@@ -48,7 +48,7 @@
 			boot.kernelModules = [ "kvm-amd" ];
 			boot.extraModulePackages = [];
 			nixpkgs.hostPlatform = "x86_64-linux";
-			hardware.cpu.amd.updateMicrocode = config.hardware.enableRedistributableFirmware;
+			hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 		};
 
 		# home settings for all users on this system

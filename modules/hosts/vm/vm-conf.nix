@@ -34,8 +34,7 @@
 		];
 
 		# system settings
-		nixos = { ... }:
-		{
+		nixos = {
 			networking.hostName = "matoo-vm";
 
 			# hardware config
@@ -55,8 +54,7 @@
 		};
 
 		# home settings for all users on this system
-		homeManager = { ... }:
-		{
+		homeManager = {
 
 		};
 	};

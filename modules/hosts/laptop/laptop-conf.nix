@@ -38,8 +38,7 @@
 		];
 
 		# system settings
-		nixos = { config, lib, ... }:
-		{
+		nixos = {
 			networking.hostName = "matoo-laptop";
 
 			# hardware config
@@ -53,8 +52,7 @@
 		};
 
 		# home settings for all users on this system
-		homeManager = { ... }:
-		{
+		homeManager = {
 
 		};
 	};

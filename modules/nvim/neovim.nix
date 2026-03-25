@@ -11,6 +11,11 @@
 			adaptArgs = lib.id;
 		};
 
+	# install full nvim config to home manager
+	den.aspects.neovim.homeManager = { self', lib, ... }: {
+		home.packages = [ self'.packages.nvim-full ];
+	};
+
 	# definition for full nvim config
 	den.aspects.nvim-full = {
 		includes = [

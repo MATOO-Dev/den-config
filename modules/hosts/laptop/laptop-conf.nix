@@ -16,7 +16,7 @@
 			# den.aspects.email
 			# den.aspects.extraPackages
 			# den.aspects.firefox
-			den.aspects.fonts
+			# den.aspects.fonts
 			# den.aspects.gaming
 			den.aspects.input
 			den.aspects.kernel
@@ -43,12 +43,13 @@
 			networking.hostName = "matoo-laptop";
 
 			# hardware config
-			boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbold" "usb_storage" "sd_mod" ];
+			boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
 			boot.initrd.kernelModules = [];
 			boot.kernelModules = [ "kvm-amd" ];
 			boot.extraModulePackages = [];
 			nixpkgs.hostPlatform = "x86_64-linux";
-			hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+			hardware.enableRedistributableFirmware = true;
+			hardware.cpu.amd.updateMicrocode = true;
 		};
 
 		# home settings for all users on this system

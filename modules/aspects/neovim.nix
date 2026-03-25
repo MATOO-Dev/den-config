@@ -1,9 +1,9 @@
 {
-	den.aspects.neovim = { inputs, ... }: {
-		homeManager = {
+	den.aspects.neovim = { ... }: {
+		homeManager = { self', lib, ... }: {
 			programs.neovim = {
 				enable = true;
-				package = inputs.neovim.nvim-full;
+				package = lib.mkForce self'.packages.nvim-full;
 			};
 		};
 	};

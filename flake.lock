@@ -181,42 +181,6 @@
         "type": "github"
       }
     },
-    "neovim": {
-      "inputs": {
-        "nixCats": "nixCats",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1771862727,
-        "narHash": "sha256-42VqmTFqfcPJI+L7V9If4YWopw0sn9LUrWCeg/N+csA=",
-        "owner": "matoo-dev",
-        "repo": "nixcats-config",
-        "rev": "082bc58b70dda5a92db80668d3dff3288cd67c34",
-        "type": "github"
-      },
-      "original": {
-        "owner": "matoo-dev",
-        "repo": "nixcats-config",
-        "type": "github"
-      }
-    },
-    "nixCats": {
-      "locked": {
-        "lastModified": 1765766809,
-        "narHash": "sha256-3Xp41+Sb1zIzASa1Uu1k1RMUoJ9CGyYb0GtvvpRPBqg=",
-        "owner": "BirdeeHub",
-        "repo": "nixCats-nvim",
-        "rev": "fe157e3ed69ed14b55ca81f597eac282caed58a2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BirdeeHub",
-        "repo": "nixCats-nvim",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1764521362,
@@ -297,7 +261,6 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
-        "neovim": "neovim",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nvf": "nvf"

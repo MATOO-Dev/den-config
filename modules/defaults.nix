@@ -1,4 +1,4 @@
-{ inputs, ... }: 
+{ inputs, den, ... }: 
 {
 	imports = [ inputs.den.flakeModule ];
 
@@ -9,6 +9,10 @@
 	den.default = {
 		nixos.system.stateVersion = "25.11";
 		homeManager.home.stateVersion = "25.11";
+
+		includes = [
+			den.provides.self'
+		];
 
 		user = {
 

@@ -12,7 +12,7 @@
 		};
 
 	# install full nvim config to home manager
-	den.aspects.neovim.homeManager = { self', lib, ... }: {
+	den.aspects.neovim.homeManager = { self', ... }: {
 		home.packages = [ self'.packages.nvim-full ];
 	};
 

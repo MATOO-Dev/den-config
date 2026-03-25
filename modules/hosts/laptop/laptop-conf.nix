@@ -38,16 +38,17 @@
 		];
 
 		# system settings
-		nixos = { ... }:
+		nixos = { config, ... }:
 		{
 			networking.hostName = "matoo-laptop";
 
 			# hardware config
-			boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];
+			boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbold" "usb_storage" "sd_mod" ];
 			boot.initrd.kernelModules = [];
 			boot.kernelModules = [ "kvm-amd" ];
 			boot.extraModulePackages = [];
 			nixpkgs.hostPlatform = "x86_64-linux";
+			hardware.cpu.amd.updateMicrocode = config.hardware.enableRedistributableFirmware;
 		};
 
 		# home settings for all users on this system

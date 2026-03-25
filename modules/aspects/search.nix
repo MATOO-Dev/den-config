@@ -7,5 +7,8 @@
 				theme = "dark";
 			};
 		};
+		programs.rofi = {
+			enable = true;
+		};
 	};
 }

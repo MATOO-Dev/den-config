@@ -10,25 +10,25 @@
 			# general
 
 			# system
-			den.aspects.audio
-			den.aspects.bluetooth
+			# den.aspects.audio
+			# den.aspects.bluetooth
 			den.aspects.bootloader
-			den.aspects.email
-			den.aspects.extraPackages
-			den.aspects.firefox
+			# den.aspects.email
+			# den.aspects.extraPackages
+			# den.aspects.firefox
 			den.aspects.fonts
-			den.aspects.gaming
+			# den.aspects.gaming
 			den.aspects.input
 			den.aspects.kernel
 			den.aspects.locale
-			den.aspects.localsend
-			den.aspects.login
+			# den.aspects.localsend
+			# den.aspects.login
 			den.aspects.networking
-			den.aspects.niri
+			# den.aspects.niri
 			den.aspects.nix
-			den.aspects.printing
-			den.aspects.snapshots
-			den.aspects.virtualization
+			# den.aspects.printing
+			# den.aspects.snapshots
+			# den.aspects.virtualization
 
 			# hardware
 			# den.aspects.fingerprint

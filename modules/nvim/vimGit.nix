@@ -23,17 +23,21 @@
 			};
 		};
 
-		git.git-conflict = {
+		git.neogit = {
 			enable = true;
 		};
+
+		# git.git-conflict = {
+		# 	enable = true;
+		# };
 
 		# gitignore plugin currently not available
 
-		utility.diffview-nvim = {
-			enable = true;
-			setupOpts = {
-				view.merge_tool.layout = "diff3_mixed";
-			};
-		};
+# 		utility.diffview-nvim = {
+# 			enable = true;
+# 			setupOpts = {
+# 				view.merge_tool.layout = "diff3_mixed";
+# 			};
+# 		};
 	};
 }

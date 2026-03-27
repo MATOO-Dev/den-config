@@ -25,7 +25,7 @@
 
 		# nvim
 		nvf.url = "github:notashelf/nvf";
-		nvf.inputs.nixpkgs.follows = "nixpkgs";
+		nvf.inputs.nixpkgs.follows = "nixpkgs-unstable";
 	};
 	outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
 		imports = [(inputs.import-tree ./modules)];

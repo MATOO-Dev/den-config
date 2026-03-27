@@ -29,7 +29,6 @@
 			den.aspects.vimVisuals
 			den.aspects.vimAutocomplete
 			den.aspects.vimGit
-			den.aspects.vimDiagnostics
 			den.aspects.vimTyping
 		];
 	};

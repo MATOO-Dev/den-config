@@ -31,8 +31,10 @@
             # 	'--function-arg-placeholders=1'
             # },
         };
+		formatter.conform-nvim.setupOpts.formatters_by_ft.c = [ "clang-format" ];
+		formatter.conform-nvim.setupOpts.formatters_by_ft.cpp = [ "clang-format" ];
         formatter.conform-nvim.setupOpts.formatters.clang-format.prepend_args = [
-            "-style={ColumnLimit: 0, IndentWidth: 4, TabWidth: 4}"
+            "--style={ColumnLimit: 0, IndentWidth: 4, TabWidth: 4}"
         ];
 
         languages.lua = {
@@ -70,6 +72,7 @@
         languages.rust = {
             enable = true;
         };
+		formatter.conform-nvim.setupOpts.formatters_by_ft.rust = [ "rustfmt" ];
 
         languages.typst = {
             enable = true;

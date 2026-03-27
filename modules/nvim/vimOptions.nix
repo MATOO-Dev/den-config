@@ -1,78 +1,83 @@
 { lib, ... }:
 {
-	den.aspects.vimOptions = {
-		# workaround for namespace collision between nvf.vim.options and nix.<module>.options
-		nvf.imports = [ (lib.mkAliasOptionModule [ "vim" "opt" ] [ "vim" "options" ]) ];
+    den.aspects.vimOptions = {
+        # workaround for namespace collision between nvf.vim.options and nix.<module>.options
+        nvf.imports = [ (lib.mkAliasOptionModule [ "vim" "opt" ] [ "vim" "options" ]) ];
 
-		vim.opt = {
-			# enable relative line numbering
-			number = true;
-			relativenumber = true;
+        clipboard = {
+            enable = true;
+            providers.wl-copy.enable = true;
+        };
 
-			# ensure tabs are 4 spaces wide, and are actually tabs instead of spaces
-			tabstop = 4;
-			shiftwidth = 4;
-			softtabstop = 0;
-			expandtab = false;
+        vim.opt = {
+            # enable relative line numbering
+            number = true;
+            relativenumber = true;
 
-			# disable wrap, but if wrap is manually enabled, break between words
-			wrap = false;
-			linebreak = true;
+            # ensure tabs are 4 spaces wide, and are actually tabs instead of spaces
+            tabstop = 4;
+            shiftwidth = 4;
+            softtabstop = 0;
+            expandtab = false;
 
-			# ignore capitalization when searching etc, unless specified
-			ignorecase = true;
-			smartcase = true;
+            # disable wrap, but if wrap is manually enabled, break between words
+            wrap = false;
+            linebreak = true;
 
-			# automatically handle indentation
-			autoindent = true;
-			smartindent = true;
+            # ignore capitalization when searching etc, unless specified
+            ignorecase = true;
+            smartcase = true;
 
-			# folding
-			foldcolumn = "0";
-			foldenable = true;
-			foldlevel = 99;
-			foldlevelstart = 99;
-			foldmethod = "expr";
-			foldexpr = "v:lua.vim.lsp.foldexpr()";
-			foldtext = "(folded)";
-			# fillchars:append({fold = ""});
+            # automatically handle indentation
+            autoindent = true;
+            smartindent = true;
 
-			# dont show insert/visual/etc, deferred to status bar plugin
-			showmode = false;
+            # folding
+            foldcolumn = "0";
+            foldenable = true;
+            foldlevel = 99;
+            foldlevelstart = 99;
+            foldmethod = "expr";
+            foldexpr = "v:lua.vim.lsp.foldexpr()";
+            foldtext = "(folded)";
+            # fillchars:append({fold = ""});
 
-			# line cursor in insert, block otherwise, and make it blink
-			guicursor = "n-v-r:block,i:ver25,a:blinkwait700-blinkoff400-blinkon250";
+            # dont show insert/visual/etc, deferred to status bar plugin
+            showmode = false;
 
-			# disable automatic backups, instead give undotree more access
-			swapfile = false;
-			backup = false;
-			undofile = true;
+            # line cursor in insert, block otherwise, and make it blink
+            guicursor = "n-v-r:block,i:ver25,a:blinkwait700-blinkoff400-blinkon250";
 
-			# enable search highlighting and incremental search
-			hlsearch = true;
-			incsearch = true;
+            # disable automatic backups, instead give undotree more access
+            swapfile = false;
+            backup = false;
+            undofile = true;
 
-			# enable colors in TUI and pull them from terminal if possible
-			termguicolors = true;
+            # enable search highlighting and incremental search
+            hlsearch = true;
+            incsearch = true;
 
-			# minimum cursor distance to top/bottom when scrolling (unless BOF/EOF)
-			scrolloff = 5;
+            # enable colors in TUI and pull them from terminal if possible
+            termguicolors = true;
 
-			# always show sign column
-			signcolumn = "yes";
+            # minimum cursor distance to top/bottom when scrolling (unless BOF/EOF)
+            scrolloff = 5;
 
-			# show bar at n chars to indicate long lines
-			colorcolumn = "81";
+            # always show sign column
+            signcolumn = "yes";
 
-			# enable @ in file names
-			# isfname:append('@-@')
+            # show bar at n chars to indicate long lines
+            colorcolumn = "81";
 
-			# faster update time
-			updatetime = 50;
+            # enable @ in file names
+            # isfname:append('@-@')
 
-			# higher default concel level for obsidian, typst, etc.
-			conceallevel = 2;
-			# vim.api.nvim_set_option('clipboard', 'unnamed')
-		};
-	};
+            # faster update time
+            updatetime = 50;
+
+            # higher default concel level for obsidian, typst, etc.
+            conceallevel = 2;
+            # vim.api.nvim_set_option('clipboard', 'unnamed')
+        };
+    };
 }

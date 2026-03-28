@@ -18,7 +18,10 @@
 		lazy.plugins.nvim-dap-view = {
 			package = pkgs.vimPlugins.nvim-dap-view;
 			setupModule = "dap-view";
-			setupOpts = {};
+			setupOpts = {
+				auto_toggle = true;
+				winbar.controls.enabled = true;
+			};
 		};
 
 		lazy.plugins.nvim-dap-virtual-text = {

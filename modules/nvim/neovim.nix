@@ -21,15 +21,16 @@
 		includes = [
 			den.aspects.vimClass
 			# import all aspects here
+			den.aspects.vimAutocomplete
+			den.aspects.vimDiagnostics
+			den.aspects.vimGit
+			den.aspects.vimKeymaps
+			den.aspects.vimLanguages
+			den.aspects.vimNavigation
 			den.aspects.vimOptions
 			den.aspects.vimTheme
-			den.aspects.vimLanguages
-			den.aspects.vimKeymaps
-			den.aspects.vimNavigation
-			den.aspects.vimVisuals
-			den.aspects.vimAutocomplete
-			den.aspects.vimGit
 			den.aspects.vimTyping
+			den.aspects.vimVisuals
 		];
 	};
 
@@ -38,9 +39,9 @@
 		includes = [
 			den.aspects.vimClass
 			# import only some aspects here
-			den.aspects.vimOptions
 			den.aspects.vimKeymaps
 			den.aspects.vimNavigation
+			den.aspects.vimOptions
 		];
 	};
 

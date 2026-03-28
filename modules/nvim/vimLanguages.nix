@@ -5,16 +5,7 @@
             formatOnSave = true;
             inlayHints.enable = true; # inline type annotations
             # lspSignature.enable = true; # incompatible with blink-cmp
-            # tiny-inline-diagnostic currently not wrapped
-            trouble = {
-                enable = true;
-                setupOpts = {
-                    warn_no_results = false;
-                    open_no_results = true;
-                    focus = true;
-                };
-            };
-        };
+		};
 
         languages = {
             enableTreesitter = true;

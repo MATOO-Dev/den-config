@@ -10,7 +10,7 @@
         languages = {
             enableTreesitter = true;
             enableFormat = true;
-            enableDAP = true;
+            # enableDAP = true;
         };
 
         languages.clang = {

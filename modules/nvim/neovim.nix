@@ -11,17 +11,13 @@
 			adaptArgs = lib.id;
 		};
 
-	# install full nvim config to home manager
-	den.aspects.neovim.homeManager = { self', ... }: {
-		home.packages = [ self'.packages.nvim-full ];
-	};
-
 	# definition for full nvim config
 	den.aspects.nvim-full = {
 		includes = [
 			den.aspects.vimClass
 			# import all aspects here
 			den.aspects.vimAutocomplete
+			den.aspects.vimDebugging
 			den.aspects.vimDiagnostics
 			den.aspects.vimGit
 			den.aspects.vimKeymaps
@@ -43,6 +39,11 @@
 			den.aspects.vimNavigation
 			den.aspects.vimOptions
 		];
+	};
+
+	# install full nvim config to home manager (package definition below)
+	den.aspects.neovim.homeManager = { self', ... }: {
+		home.packages = [ self'.packages.nvim-full ];
 	};
 
 	# expose packages to all system types defined in flake

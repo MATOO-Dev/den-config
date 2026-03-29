@@ -55,8 +55,10 @@
 			(make_map "n" "<s-cr>" "O<esc>" "Empty Line Above")
 
 			#go to next/previous buffer with count support
-			(make_map "n" "<c-s-k>" ''":<c-u>" .. v:count1 .. "bnext<cr>"'' "Next Buffer")
-			(make_map "n" "<c-s-j>" ''":<c-u>" .. v:count1 .. "bprev<cr>"'' "Previous Buffer")
+			# (make_map "n" "<c-s-k>" ''":<c-u>" .. v:count1 .. "bnext<cr>"'' "Next Buffer")
+			# (make_map "n" "<c-s-j>" ''":<c-u>" .. v:count1 .. "bprev<cr>"'' "Previous Buffer")
+			(make_map "n" "<c-s-k>" "<cmd>bnext<cr>" "Next Buffer")
+			(make_map "n" "<c-s-j>"  "<cmd>bprev<cr>" "Previous Buffer")
 
 			# cycle through quickfix list without focus
 			(make_map "n" "<a-n>" "<cmd>cnext<cr>" "Go to next quickfix item")

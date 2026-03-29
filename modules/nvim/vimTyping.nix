@@ -1,5 +1,5 @@
 {
-	den.aspects.vimTyping.vim = {
+	den.aspects.vimTyping.vim = { pkgs, ... }: {
 		# ultimate autopair currently not packaged
 
 		comments.comment-nvim = {
@@ -15,13 +15,50 @@
 			useVendoredKeybindings = false;
 		};
 
-		# vim-move currently not packaged
+		# ultimate-autopair is currently not exposed by nvf
+		lazy.plugins.ultimate-autopair-nvim = {
+			package = pkgs.vimPlugins.ultimate-autopair-nvim;
+			setupModule = "ultimate-autopair.nvim";
+			setupOpts = {
+				# { "$", "$", ft = { 'typst' } };
+			};
+			event = [
+				"InsertEnter"
+				"CmdLineEnter"
+			];
+		};
 
-		# quicker currently not packaged
+		# vim-move is currently not exposed by nvf
+		lazy.plugins.vim-move = {
+			package = pkgs.vimPlugins.vim-move;
+			setupModule = "vim-move";
+			setupOpts = {};
+			event = [ "DeferredUIEnter" ];
+		};
 
-		# tabout currently not packaged
+		# quicker is currently not exposed by nvf
+		lazy.plugins.quicker-nvim = {
+			package = pkgs.vimPlugins.quicker-nvim;
+			setupModule = "quicker.nvim";
+			setupOpts = {};
+			event = [ "DeferredUIEnter" ];
+		};
 
-		# vim-wordmotion currently not packaged
+		# tabout is currently not exposed by nvf
+		lazy.plugins.tabout-nvim = {
+			package = pkgs.vimPlugins.tabout-nvim;
+			setupModule = "tabout-nvim";
+			setupOpts = {};
+			event = [ "InsertCharPre" ];
+		};
+
+		# vim-wordmotion is currently not exposed by nvf
+		lazy.plugins.vim-wordmotion = {
+			package = pkgs.vimPlugins.vim-wordmotion;
+			setupModule = "vim-wordmotion";
+			setupOpts = {};
+			event = [ "DeferredUIEnter" ];
+		};
 
 		utility.undotree = {
 			enable = true;

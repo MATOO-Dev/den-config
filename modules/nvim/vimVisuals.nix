@@ -52,5 +52,18 @@
 				z = [ "{'location'}" ];
 			};
 		};
+
+		notify.nvim-notify = {
+			enable = true;
+			setupOpts = {
+				# background_color = "#000000";
+				render = "compact";
+				stages = "fade";
+			};
+		};
+
+		ui.noice = {
+			enable = true;
+		};
 	};
 }

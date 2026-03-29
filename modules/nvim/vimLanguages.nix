@@ -1,5 +1,5 @@
 {
-    den.aspects.vimLanguages.vim = {
+    den.aspects.vimLanguages.vim = { pkgs, ... }: {
         lsp = {
             enable = true;
             formatOnSave = true;
@@ -12,6 +12,12 @@
             enableFormat = true;
             # enableDAP = true;
         };
+
+		treesitter = {
+			fold = true;
+			highlight.enable = true;
+			indent.enable = true;
+		};
 
         languages.clang = {
             enable = true;
@@ -50,6 +56,7 @@
         # enable = true;
         # };
 
+		# glsl_analyzer lsp currently doesnt support error checking
         languages.glsl = {
             enable = true;
         };

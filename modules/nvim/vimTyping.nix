@@ -1,7 +1,5 @@
 {
 	den.aspects.vimTyping.vim = { pkgs, ... }: {
-		# ultimate autopair currently not packaged
-
 		comments.comment-nvim = {
 			enable = true;
 			setupOpts = {
@@ -16,6 +14,7 @@
 		};
 
 		# ultimate-autopair is currently not exposed by nvf
+		# currently not working
 		lazy.plugins.ultimate-autopair-nvim = {
 			package = pkgs.vimPlugins.ultimate-autopair-nvim;
 			setupModule = "ultimate-autopair.nvim";
@@ -38,14 +37,16 @@
 		};
 
 		# quicker is currently not exposed by nvf
+		# currently not working
 		lazy.plugins.quicker-nvim = {
 			package = pkgs.vimPlugins.quicker-nvim;
-			setupModule = "quicker.nvim";
+			setupModule = "quicker";
 			setupOpts = {};
 			event = [ "DeferredUIEnter" ];
 		};
 
 		# tabout is currently not exposed by nvf
+		# currently not working
 		lazy.plugins.tabout-nvim = {
 			package = pkgs.vimPlugins.tabout-nvim;
 			setupModule = "tabout-nvim";

@@ -13,6 +13,9 @@
 
                 # only works if font name is also set
                 # font.size = 11;
+				# try these at some point
+				# font = "ttf-iosevka-ss02";
+				# emoji-font = "noto-fonts-emoji";
 
                 keybindings = {
                     "cmd+plus" = "change_font_size all +1.0";

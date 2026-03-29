@@ -31,11 +31,11 @@
 			};
 		};
 
+		# not working rn, and idk why
 		lazy.plugins.nvim-dap-virtual-text = {
 			package = pkgs.vimPlugins.nvim-dap-virtual-text;
 			setupModule = "nvim-dap-virtual-text";
 			setupOpts = {
-				enabled = true;
 				commented = true;
 				highlight_changed_variables = true;
 				highlight_new_as_changed = true;

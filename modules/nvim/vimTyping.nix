@@ -11,7 +11,7 @@
 
 		utility.surround = {
 			enable = true;
-			# dont override default keybinds
+			# dont override default keybinds with nvf's version
 			useVendoredKeybindings = false;
 		};
 
@@ -29,11 +29,12 @@
 		};
 
 		# vim-move is currently not exposed by nvf
-		lazy.plugins.vim-move = {
+		# vimscript plugin, so use extraPlugins rather than lazy.plugins
+		extraPlugins.vim-move = {
 			package = pkgs.vimPlugins.vim-move;
-			setupModule = "vim-move";
-			setupOpts = {};
-			event = [ "DeferredUIEnter" ];
+			setup = ''
+				event = "DeferredUIEnter";
+			'';
 		};
 
 		# quicker is currently not exposed by nvf
@@ -53,11 +54,12 @@
 		};
 
 		# vim-wordmotion is currently not exposed by nvf
-		lazy.plugins.vim-wordmotion = {
+		# vimscript plugin, so use extraPlugins rather than lazy.plugins
+		extraPlugins.vim-wordmotion = {
 			package = pkgs.vimPlugins.vim-wordmotion;
-			setupModule = "vim-wordmotion";
-			setupOpts = {};
-			event = [ "DeferredUIEnter" ];
+			setup = ''
+				event = "DeferredUIEnter";
+			'';
 		};
 
 		utility.undotree = {

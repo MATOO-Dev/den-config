@@ -1,39 +1,21 @@
 {
-	den.aspects.firefox.nixos ={
-		environment.sessionVariables.MOX_ENABLE_WAYLAND = 1;
-	};
-
-	den.aspects.firefox.homeManager = { lib, ... }: {
+	den.aspects.firefox.home-manager = { lib, ...}: {
 		programs.firefox = {
-			enable = true;
-			languagePacks = [ "en-US" ];
-			policies = {
-				AppAutoUpdate = false;
-				BackgroundAppUpdate = false;
-				DisableFirefoxStudies = true;
-				DisableTelemetry = true;
-				DisablePasswordReveal = true;
-				DisplayMenuBar = "never";
-				DontCheckDefaultBrowser = true;
-				HardwareAcceleration = true;
-				OfferToSaveLogins = false;
-				DefaultDownloadDirectory = "\${home}/Downloads";
-
-				ExtensionSettings = let
-					# function stolen & adjusted from github user abhinandh-s
-					get-extension = slug: uuid: private: area: {
-						name = uuid;
-						value = {
-							install_url = "https://addons.mozilla.org/firefox/downloads/latest/${slug}/latest.xpi";
-							default_area = area;
-							private_browsing = private;
-							allowed_types = [ "extension" ];
-							installation_mode = "force_installed";
-							updates_disabled = true;
-							blocked_install_message = "This extension's installation was blocked";
-						};
+			ExtensionSettings = let
+				# function stolen & adjusted from github user abhinandh-s
+				get-extension = slug: uuid: private: area: {
+					name = uuid;
+					value = {
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/${slug}/latest.xpi";
+						default_area = area;
+						private_browsing = private;
+						allowed_types = [ "extension" ];
+						installation_mode = "force_installed";
+						updates_disabled = true;
+						blocked_install_message = "This extension's installation was blocked";
 					};
-				in lib.listToAttrs [
+				};
+			in lib.listToAttrs [
 					# increase volume up to 600 %
 					(get-extension "600-sound-volume" "{c4b582ec-4343-438c-bda2-2f691c16c262}" false "navbar")
 					# remove tracking parameters from urls
@@ -86,55 +68,18 @@
 					(get-extension "youtube-shorts-block" "{34daeb50-c2d2-4f14-886a-7160b24d66a4}" false "menupanel")
 				]; # ++
 
-				# 	"*" = {
-				# 		allowed_types = [ "extension" ];
-				# 		installation_mode = "force_installed";
-				# 		updates_disabled = true;
-				# 		blocked_install_message = "This extension's installation was blocked";
-				# 	};
+			# 	"*" = {
+			# 		allowed_types = [ "extension" ];
+			# 		installation_mode = "force_installed";
+			# 		updates_disabled = true;
+			# 		blocked_install_message = "This extension's installation was blocked";
+			# 	};
 
-				# "3rdparty".Extensions = {
-				# 	"xyz".adminSettings = {
-				# 		# stuff
-				# 	};
-				# };
-			};
-			profiles.matoo = {
-				search = {
-					default = "ecosia";
-					privateDefault = "ecosia";
-
-					engines = {
-						google.metaData.alias = "@g";
-						bing.metaData.hidden = true;
-						duckduckgo.metaData.hidden = true;
-						nix-packages = {
-							name = "Nix package search";
-							urls = [{ template = "https://search.nixos.org/packages?query={searchTerms}"; }];
-							icon = "https://nixos.org/favicon.ico";
-							definesAliases = [ "@np" ];
-						};
-						nix-options = {
-							name = "Nix option search";
-							urls = [{ template = "https://search.nixos.org/options?query={searchTerms}"; }];
-							icon = "https://nixos.org/favicon.ico";
-							definesAliases = [ "@no" ];
-						};
-						nixos-wiki = {
-							name = "NixOS wiki";
-							urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
-							icon = "https://wiki.nixos.org/favicon.ico";
-							definesAliases = [ "@nw" ];
-						};
-						mynixos = {
-							name = "MyNixOS";
-							urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
-							icon = "https://mynixos.com/favicon.ico";
-							definesAliases = [ "@ns" ];
-						};
-					};
-				};
-			};
+			# "3rdparty".Extensions = {
+			# 	"xyz".adminSettings = {
+			# 		# stuff
+			# 	};
+			# };
 		};
 	};
 }

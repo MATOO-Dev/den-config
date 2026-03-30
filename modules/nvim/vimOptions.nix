@@ -2,14 +2,13 @@
 {
     den.aspects.vimOptions = {
         # workaround for namespace collision between nvf.vim.options and nix.<module>.options
-        nvf.imports = [ (lib.mkAliasOptionModule [ "vim" "opt" ] [ "vim" "options" ]) ];
 
         clipboard = {
             enable = true;
             providers.wl-copy.enable = true;
         };
 
-        vim.opt = {
+        vim.opts = {
             # enable relative line numbering
             number = true;
             relativenumber = true;

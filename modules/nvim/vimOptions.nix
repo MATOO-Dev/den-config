@@ -30,6 +30,7 @@
             # automatically handle indentation
             autoindent = true;
             smartindent = true;
+			# indentexpr = ""; # fixes treesitter indentation, but needs to be set differently
 
             # folding
             foldcolumn = "0";

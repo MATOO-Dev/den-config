@@ -18,6 +18,7 @@
 			den.aspects.firefox
 			den.aspects.fonts
 			den.aspects.gaming
+			den.aspects.gpupassthrough
 			den.aspects.input
 			den.aspects.kernel
 			den.aspects.locale

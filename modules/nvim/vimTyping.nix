@@ -15,17 +15,17 @@
 
 		# ultimate-autopair is currently not exposed by nvf
 		# currently not working
-		lazy.plugins.ultimate-autopair-nvim = {
-			package = pkgs.vimPlugins.ultimate-autopair-nvim;
-			setupModule = "ultimate-autopair.nvim";
-			setupOpts = {
-				# { "$", "$", ft = { 'typst' } };
-			};
-			event = [
-				"InsertEnter"
-				"CmdLineEnter"
-			];
-		};
+		# lazy.plugins.ultimate-autopair-nvim = {
+		# 	package = pkgs.vimPlugins.ultimate-autopair-nvim;
+		# 	setupModule = "ultimate-autopair.nvim";
+		# 	setupOpts = {
+		# 		# { "$", "$", ft = { 'typst' } };
+		# 	};
+		# 	event = [
+		# 		"InsertEnter"
+		# 		"CmdLineEnter"
+		# 	];
+		# };
 
 		# vim-move is currently not exposed by nvf
 		# vimscript plugin, so use extraPlugins rather than lazy.plugins
@@ -38,21 +38,21 @@
 
 		# quicker is currently not exposed by nvf
 		# currently not working
-		lazy.plugins.quicker-nvim = {
-			package = pkgs.vimPlugins.quicker-nvim;
-			setupModule = "quicker";
-			setupOpts = {};
-			event = [ "DeferredUIEnter" ];
-		};
+		# lazy.plugins.quicker-nvim = {
+		# 	package = pkgs.vimPlugins.quicker-nvim;
+		# 	setupModule = "quicker";
+		# 	setupOpts = {};
+		# 	event = [ "DeferredUIEnter" ];
+		# };
 
 		# tabout is currently not exposed by nvf
 		# currently not working
-		lazy.plugins.tabout-nvim = {
-			package = pkgs.vimPlugins.tabout-nvim;
-			setupModule = "tabout-nvim";
-			setupOpts = {};
-			event = [ "InsertCharPre" ];
-		};
+		# lazy.plugins.tabout-nvim = {
+		# 	package = pkgs.vimPlugins.tabout-nvim;
+		# 	setupModule = "tabout-nvim";
+		# 	setupOpts = {};
+		# 	event = [ "InsertCharPre" ];
+		# };
 
 		# vim-wordmotion is currently not exposed by nvf
 		# vimscript plugin, so use extraPlugins rather than lazy.plugins

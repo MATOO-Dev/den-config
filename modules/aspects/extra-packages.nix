@@ -38,6 +38,7 @@
 				kdePackages.kruler # measuring tool
 				# libreoffice # office suite
 				masterpdfeditor # pdf editor
+				material-maker # PBR material tool
 				mission-center # task manager
 				mpv # video player
 				nautilus # file browser

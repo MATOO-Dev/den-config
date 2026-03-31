@@ -14,6 +14,7 @@
             # custom aspects
             den.aspects.bar
             den.aspects.coding
+            den.aspects.defaultapps
             den.aspects.discord
             den.aspects.email
             den.aspects.extraPackages

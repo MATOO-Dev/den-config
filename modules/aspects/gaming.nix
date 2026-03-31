@@ -6,6 +6,9 @@
 				remotePlay.openFirewall = true;
 				dedicatedServer.openFirewall = false;
 				localNetworkGameTransfers.openFirewall = true;
+				extraCompatPackages = with pkgs; [
+				  proton-ge-bin
+				];
 
 				# override to the default steam package
 				# causes custom rebuild -> increases eval time

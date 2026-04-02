@@ -3,9 +3,12 @@
 		programs.git = {
 			enable = true;
 
-			settings.user = {
-				name = "MATOO-Dev";
-				email = "matoo-dev@proton.me";
+			settings = {
+				user = {
+					name = "MATOO-Dev";
+					email = "matoo-dev@proton.me";
+				};
+				credential.helper = "store";
 			};
 
 			lfs.enable = true;

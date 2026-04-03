@@ -22,7 +22,6 @@
                     blender # 3d modeling
                     chromium # backup browser, main is firefox
                     denaro # personal finance tracker
-                    # dolphin # file browser
                     drawio # diagram maker
                     # easytag # media metadata editor
                     element-desktop # matrix client
@@ -36,6 +35,7 @@
                     # gnuplot # graph plotting
                     handbrake # ffmpeg frontend
                     identity # media comparer
+                    kdePackages.dolphin # file browser
                     kdePackages.filelight # disk usage analyzer
                     kdePackages.kdenlive # video editor
                     kdePackages.kolourpaint # paint scribbles

@@ -13,6 +13,7 @@ binds {
 	//////////////////
     Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+R hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun"; }
+    Mod+N hotkey-overlay-title="Run an Application: Dolphin" { spawn "dolphin"; }
 	Ctrl+Shift+Escape { spawn "missioncenter"; }
 
 	/////////////////

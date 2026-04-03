@@ -48,6 +48,7 @@
                     mpv # video player
                     nautilus # file browser
                     numbat # scientific calculation lang
+                    obsidian # note taking tool
                     # onlyoffice-bin # office suite
                     openfortivpn # vpn client
                     pandoc # document converter

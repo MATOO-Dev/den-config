@@ -40,6 +40,7 @@
                     kdePackages.kdenlive # video editor
                     kdePackages.kolourpaint # paint scribbles
                     kdePackages.kruler # measuring tool
+                    kdePackages.partitionmanager # disk management tool
                     # libreoffice # office suite
                     masterpdfeditor # pdf editor
                     material-maker # PBR material tool

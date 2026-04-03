@@ -26,7 +26,7 @@
             den.aspects.neovim
             den.aspects.niri
             den.aspects.nix
-            # den.aspects.obsidian
+            den.aspects.obsidian
             den.aspects.prompt
             den.aspects.recording
             den.aspects.search

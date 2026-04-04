@@ -20,7 +20,7 @@
                     # ark # kde zip tool
                     audacity # audio editor
                     blender # 3d modeling
-                    chromium # backup browser, main is firefox
+                    # chromium # backup browser, main is firefox
                     denaro # personal finance tracker
                     drawio # diagram maker
                     # easytag # media metadata editor

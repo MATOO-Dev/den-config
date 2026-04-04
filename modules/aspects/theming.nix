@@ -8,12 +8,22 @@
                 enable = true;
                 polarity = "dark";
                 autoEnable = false;
-                base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+                base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
                 targets = {
-                    vesktop.enable = true;
+                    rofi.enable = true;
                     gtk.enable = true;
                     qt.enable = true;
+                    vesktop.enable = true;
                 };
+            };
+
+            xdg.configFile.kdeglobals = {
+                enable = true;
+                # fix for dolphin theming, see https://github.com/nix-community/stylix/issues/2183
+                text = ''
+                    [UiSettings]
+                    ColorScheme=*
+                '';
             };
         };
 }

@@ -31,6 +31,7 @@
             den.aspects.shells
             den.aspects.snapshots
             den.aspects.syncthing
+            den.aspects.theming
         ];
 
         # general user config

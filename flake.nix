@@ -30,6 +30,10 @@
         # theming
         stylix.url = "github:nix-community/stylix/release-25.11";
         stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+        # search nixpkgs files
+        nix-index-database.url = "github:nix-community/nix-index-database";
+        nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     };
     outputs =
         inputs:

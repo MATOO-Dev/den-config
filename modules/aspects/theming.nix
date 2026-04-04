@@ -12,18 +12,18 @@
                 targets = {
                     rofi.enable = true;
                     gtk.enable = true;
-                    qt.enable = true;
+                    qt.enable = false;
                     vesktop.enable = true;
                 };
             };
 
-            xdg.configFile.kdeglobals = {
-                enable = true;
-                # fix for dolphin theming, see https://github.com/nix-community/stylix/issues/2183
-                text = ''
-                    [UiSettings]
-                    ColorScheme=*
-                '';
-            };
+            # xdg.configFile.kdeglobals = {
+            #     enable = true;
+            #     # fix for dolphin theming, see https://github.com/nix-community/stylix/issues/2183
+            #     text = ''
+            #         [UiSettings]
+            #         ColorScheme=*
+            #     '';
+            # };
         };
 }

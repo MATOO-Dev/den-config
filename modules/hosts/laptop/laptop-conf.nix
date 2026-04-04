@@ -36,6 +36,9 @@
             # den.aspects.powersave
             # den.aspects.kanata
             den.aspects.laptop-disk
+
+            den.aspects.ld
+            den.aspects.graphics
         ];
 
         # system settings

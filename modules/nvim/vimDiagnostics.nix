@@ -23,18 +23,21 @@
                         enable_on_select = true;
                         show_source = false;
                         multilines = {
-							enabled = true;
-							always_show = true;
-						};
+                            enabled = true;
+                            always_show = true;
+                        };
                     };
                 };
-				event = [ "BufEnter" ];
-				keys = [{
-					key = "<leader>ti";
-					mode = "n";
-					action = "<cmd>TinyInlineDiag toggle<cr>";
-					desc = "[T]oggle [I]nline diagnostics";
-				}];
+                after = "vim.diagnostic.config({ virtual_text = false })";
+                event = "BufEnter";
+                keys = [
+                    {
+                        key = "<leader>ti";
+                        mode = "n";
+                        action = "<cmd>TinyInlineDiag toggle<cr>";
+                        desc = "[T]oggle [I]nline diagnostics";
+                    }
+                ];
             };
         };
 }

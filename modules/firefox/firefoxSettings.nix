@@ -1,9 +1,9 @@
 {
-    den.aspects.ff.nixos = {
+    den.aspects.firefox.nixos = {
         environment.sessionVariables.MOX_ENABLE_WAYLAND = 1;
     };
 
-    den.aspects.ff.home-manager.programs.firefox = {
+    den.aspects.firefox.homeManager.programs.firefox = {
         enable = true;
         languagePacks = [ "en-US" ];
 

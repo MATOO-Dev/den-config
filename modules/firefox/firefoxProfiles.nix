@@ -1,5 +1,5 @@
 {
-    den.aspects.ff.home-manager.programs.firefox = {
+    den.aspects.firefox.homeManager.programs.firefox = {
         profiles.matoo = {
             search = {
                 default = "ecosia";

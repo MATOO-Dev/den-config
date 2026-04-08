@@ -1,9 +1,9 @@
 {
-    den.aspects.ff.home-manager =
+    den.aspects.firefox.homeManager =
         { lib, ... }:
         {
             programs.firefox = {
-                ExtensionSettings =
+                policies.ExtensionSettings =
                     let
                         # function stolen & adjusted from github user abhinandh-s
                         get-extension = slug: uuid: private: area: {

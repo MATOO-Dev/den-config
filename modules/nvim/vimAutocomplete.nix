@@ -5,20 +5,21 @@
             autocomplete.blink-cmp = {
                 enable = true;
                 friendly-snippets.enable = true;
+				# appears to be bugged, none of these are applied
                 setupOpts = {
-                    # appears to be bugged
-                    keymap.preset = "super-tab";
-                    # cmdline.keymap.preset = "super-tab";
-                    # completion.documentation.auto_show = true;
-                    # completion.list.selection.auto_insert = false;
-                    # signature.enabled = true;
-                    # sources.default = [
-                    # 	"lsp"
-                    # 	"path"
-                    # 	"snippets"
-                    # 	"buffer"
-                    # ];
+					keymap.preset = "super-tab";
+                    cmdline.keymap.preset = "super-tab";
+                    completion.documentation.auto_show = true;
+                    completion.list.selection.auto_insert = false;
+                    signature.enabled = true;
+                    sources.default = [
+                    	"lsp"
+                    	"path"
+                    	"snippets"
+                    	"buffer"
+                    ];
                 };
+				# mappings.complete = "<tab>";
             };
 
             # appears to break tiny-inline-diagnostic

@@ -34,7 +34,13 @@
                     {
                         key = "<leader>ti";
                         mode = "n";
-                        action = "<cmd>TinyInlineDiag toggle<cr>";
+						lua = true;
+                        action = ''
+							function()
+								require("tiny-inline-diagnostic").toggle()
+								vim.diagnostic.config({virtual_lines = not vim.diagnostic.config().virtual_lines})
+							end
+						'';
                         desc = "[T]oggle [I]nline diagnostics";
                     }
                 ];

@@ -62,14 +62,14 @@
             packages.nvim-full =
                 (inputs.nvf.lib.neovimConfiguration {
                     inherit pkgs;
-                    modules = [ (den.lib.aspects.resolve "nvf" [ den.aspects.nvim-full ] den.aspects.nvim-full) ];
+                    modules = [ (den.lib.aspects.resolve "nvf" den.aspects.nvim-full) ];
                 }).neovim;
 
             # small nvim package for ssh etc.
             packages.nvim-small =
                 (inputs.nvf.lib.neovimConfiguration {
                     inherit pkgs;
-                    modules = [ (den.lib.aspects.resolve "nvf" [ den.aspects.nvim-small ] den.aspects.nvim-small) ];
+                    modules = [ (den.lib.aspects.resolve "nvf" den.aspects.nvim-small) ];
                 }).neovim;
         };
 }

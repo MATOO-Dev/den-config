@@ -1,5 +1,7 @@
 {
 	den.aspects.vimKeymaps.vim = {
+		vendoredKeymaps.enable = false;
+
 		globals = {
 			mapleader = " ";
 			maplocalleader = "\\";

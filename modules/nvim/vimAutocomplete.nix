@@ -19,7 +19,6 @@
                     	"buffer"
                     ];
                 };
-				# mappings.complete = "<tab>";
             };
 
             # appears to break tiny-inline-diagnostic

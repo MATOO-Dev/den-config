@@ -1,6 +1,7 @@
 {
 	den.aspects.vimKeymaps.vim = {
-		vendoredKeymaps.enable = false;
+		# disable all nvf supplied keymaps
+		# vendoredKeymaps.enable = false;
 
 		globals = {
 			mapleader = " ";

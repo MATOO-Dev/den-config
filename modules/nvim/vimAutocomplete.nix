@@ -5,7 +5,6 @@
             autocomplete.blink-cmp = {
                 enable = true;
                 friendly-snippets.enable = true;
-				# appears to be bugged, none of these are applied
                 setupOpts = {
 					keymap.preset = "super-tab";
                     cmdline.keymap.preset = "super-tab";
@@ -19,6 +18,9 @@
                     	"buffer"
                     ];
                 };
+				# fix keymap preset being overriden by nvf default keymaps
+				mappings.next = null;
+				mappings.previous = null;
             };
 
             # appears to break tiny-inline-diagnostic

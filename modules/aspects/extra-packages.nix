@@ -31,6 +31,7 @@
                     ffmpeg # media transcoder
                     foliate # ebook reader
                     gimp # image editor
+                    gnome-disk-utility # disk management tool
                     gnome-obfuscate # information censor
                     # gnuplot # graph plotting
                     handbrake # ffmpeg frontend

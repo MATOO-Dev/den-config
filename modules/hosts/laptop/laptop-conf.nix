@@ -29,7 +29,7 @@
             den.aspects.nix
             den.aspects.printing
             den.aspects.snapshots
-            # den.aspects.virtualization
+            den.aspects.virtualization
 
             # hardware
             # den.aspects.fingerprint

@@ -18,6 +18,7 @@
             HardwareAcceleration = true;
             OfferToSaveLogins = false;
             DefaultDownloadDirectory = "\${home}/Downloads";
+            Homepage.StartPage = "previous-session";
         };
     };
 }

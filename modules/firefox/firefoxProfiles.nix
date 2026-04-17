@@ -4,6 +4,7 @@
             search = {
                 default = "ecosia";
                 privateDefault = "ecosia";
+                force = true; # fix firefox search config file being in the way of rebuilds
 
                 engines = {
                     google.metaData.alias = "@g";

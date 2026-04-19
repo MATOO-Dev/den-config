@@ -39,6 +39,9 @@
 
             den.aspects.ld
             den.aspects.graphics
+
+			# testing
+			den.aspects.plasma
         ];
 
         # system settings

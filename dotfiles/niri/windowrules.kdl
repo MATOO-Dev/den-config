@@ -63,6 +63,8 @@ window-rule {
 window-rule {
 	match app-id="org.kde.kruler"
     match app-id="firefox" title="Picture-in-Picture"
+	// uni exercises
+	match title =".*-Exercise-.*"
 
 	open-floating true
 	geometry-corner-radius 0

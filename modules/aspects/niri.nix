@@ -19,9 +19,8 @@
             ];
         };
 
-    den.aspects.niri.homeManager =
-        { config, ... }:
-        {
-            home.file.".config/niri".source = config.lib.file.mkOutOfStoreSymlink ./../../dotfiles/niri;
-        };
+    den.aspects.niri.homeManager = {
+        # home.file.".config/niri".source = config.lib.file.mkOutOfStoreSymlink ./../../dotfiles/niri;
+        home.file.".config/niri".source = ./../../dotfiles/niri;
+    };
 }

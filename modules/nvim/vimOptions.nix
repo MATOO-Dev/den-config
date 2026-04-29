@@ -78,5 +78,15 @@
 			conceallevel = 2;
 			# vim.api.nvim_set_option('clipboard', 'unnamed')
 		};
+
+		vim.autocmds = [
+		  {
+			enable = true;
+			event = [ "BufEnter" ];
+			pattern = [ "*" ];
+			# command = "setlocal indentexpr=nvim_treesitter#indent()";
+			command = ''setlocal indentexpr=""'';
+		  }
+		];
 	};
 }

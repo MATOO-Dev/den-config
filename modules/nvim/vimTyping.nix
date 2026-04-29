@@ -13,17 +13,19 @@
 			useVendoredKeybindings = false;
 		};
 
-		lazy.plugins."ultimate-autopair.nvim" = {
-			package = pkgs.vimPlugins.ultimate-autopair-nvim;
-			setupModule = "ultimate-autopair";
-			setupOpts = {
-				# { "$", "$", ft = { 'typst' } };
-			};
-			event = [
-				"InsertEnter"
-				"CmdLineEnter"
-			];
-		};
+		# lazy.plugins."ultimate-autopair.nvim" = {
+		# 	package = pkgs.vimPlugins.ultimate-autopair-nvim;
+		# 	setupModule = "ultimate-autopair";
+		# 	setupOpts = {
+		# 		# { "$", "$", ft = { 'typst' } };
+		# 	};
+		# 	event = [
+		# 		"InsertEnter"
+		# 		"CmdLineEnter"
+		# 	];
+		# };
+
+		mini.pairs.enable = true;
 
 		# vim-move is currently not exposed by nvf
 		# vimscript plugin, so use extraPlugins rather than lazy.plugins

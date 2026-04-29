@@ -68,7 +68,6 @@
 			format.type = ["alejandra"];
 		};
 		formatter.conform-nvim.setupOpts.formatters.nixfmt.prepend_args = ["--indent=4"];
-		formatter.conform-nvim.setupOpts.formatters.alejandra.prepend_args = ["--indentation=Tabs"];
 
 		languages.rust = {
 			enable = true;

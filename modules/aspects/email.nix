@@ -1,6 +1,6 @@
 {
 	den.aspects.email = {
-		nixos = { pkgs, ... }: {
+		nixos = {pkgs, ...}: {
 			services = {
 				protonmail-bridge.enable = true;
 				gnome.gnome-keyring.enable = true;
@@ -11,7 +11,7 @@
 			];
 		};
 
-		homeManager = { ... }: {
+		homeManager = {...}: {
 			programs.thunderbird = {
 				enable = true;
 				# settings applied to all profiles

@@ -1,5 +1,4 @@
-{ den, ... }:
-{
+{den, ...}: {
 	# define vm config aspect + user aspect
 	den.hosts.x86_64-linux.matoo-vm.users.matoo = {};
 
@@ -38,9 +37,9 @@
 			networking.hostName = "matoo-vm";
 
 			# hardware config
-			boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];
+			boot.initrd.availableKernelModules = ["ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk"];
 			boot.initrd.kernelModules = [];
-			boot.kernelModules = [ "kvm-amd" ];
+			boot.kernelModules = ["kvm-amd"];
 			boot.extraModulePackages = [];
 			nixpkgs.hostPlatform = "x86_64-linux";
 
@@ -55,7 +54,6 @@
 
 		# home settings for all users on this system
 		homeManager = {
-
 		};
 	};
 }

@@ -1,5 +1,5 @@
 {
-	den.aspects.audio.nixos = { pkgs, ... }: {
+	den.aspects.audio.nixos = {pkgs, ...}: {
 		environment.systemPackages = with pkgs; [
 			pavucontrol
 		];

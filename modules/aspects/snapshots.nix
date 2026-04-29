@@ -2,11 +2,10 @@
 	den.aspects.snapshots = {
 		nixos = {
 			services.snapper = {
-
 			};
 		};
 
-		homeManager = { pkgs, ... }: {
+		homeManager = {pkgs, ...}: {
 			home.packages = with pkgs; [
 				snapper-gui
 			];

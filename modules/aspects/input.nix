@@ -1,6 +1,6 @@
 {
-	den.aspects.input = { user, ... }: {
-		nixos = { ... }: {
+	den.aspects.input = {user, ...}: {
+		nixos = {...}: {
 			services.xserver.xkb = {
 				layout = "us";
 				variant = "";
@@ -23,7 +23,7 @@
 			];
 		};
 
-		homeManager = { pkgs, ... }: {
+		homeManager = {pkgs, ...}: {
 			# todo: add user to dialout group for bazecor
 
 			home.packages = with pkgs; [

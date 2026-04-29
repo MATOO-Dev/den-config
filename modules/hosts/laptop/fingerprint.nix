@@ -1,5 +1,5 @@
 {
-	den.aspects.fingerprint.nixos = { ... }: {
+	den.aspects.fingerprint.nixos = {...}: {
 		services = {
 			fprintd.enable = true;
 			# this might not even be needed anymore, needs to be tested

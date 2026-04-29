@@ -44,12 +44,12 @@
 				right = "";
 			};
 			activeSection = {
-				a = [ "{'mode'}" ];
-				b = [ "{'diagnostics'}" ];
-				c = [ "{'buffers'}" ];
-				x = [ "{'filetype'}" ];
-				y = [ "{'branch'}" ];
-				z = [ "{'location'}" ];
+				a = ["{'mode'}"];
+				b = ["{'diagnostics'}"];
+				c = ["{'buffers'}"];
+				x = ["{'filetype'}"];
+				y = ["{'branch'}"];
+				z = ["{'location'}"];
 			};
 		};
 

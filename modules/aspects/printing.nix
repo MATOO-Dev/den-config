@@ -1,6 +1,6 @@
 {
-	den.aspects.printing = { user, ... }: {
-		nixos = { pkgs, ... }: {
+	den.aspects.printing = {user, ...}: {
+		nixos = {pkgs, ...}: {
 			# enable CUPS to print documents
 			services.printing = {
 				enable = true;
@@ -30,7 +30,7 @@
 			];
 		};
 
-		homeManager = { pkgs, ... }: {
+		homeManager = {pkgs, ...}: {
 			home.packages = with pkgs; [
 				simple-scan # gnome scanning app
 			];

@@ -1,9 +1,9 @@
 {
-	den.aspects.syncthing.homeManager = { pkgs, ... }: {
+	den.aspects.syncthing.homeManager = {pkgs, ...}: {
 		services.syncthing = {
 			enable = true;
 			tray.enable = true;
-			# settings = { 
+			# settings = {
 			# 	devices = { };
 			#	folders = { };
 			# };

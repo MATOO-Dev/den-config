@@ -1,5 +1,5 @@
 {
-	den.aspects.sleep.nixos = { ... }: {
+	den.aspects.sleep.nixos = {...}: {
 		systemd.targets = {
 			sleep.enable = false;
 			suspend.enable = false;

@@ -1,5 +1,5 @@
 {
-	den.aspects.bar.homeManager = { pkgs, ... }: {
+	den.aspects.bar.homeManager = {pkgs, ...}: {
 		programs.waybar = {
 			enable = true;
 			settings = {
@@ -104,7 +104,7 @@
 							phone = "";
 							portable = "";
 							car = "";
-							default = [ "󰋋" "󰋋" "󰋋" ];
+							default = ["󰋋" "󰋋" "󰋋"];
 						};
 					};
 				};

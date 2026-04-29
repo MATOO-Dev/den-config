@@ -1,5 +1,5 @@
 {
-	den.aspects.search.homeManager = { pkgs, ... }: {
+	den.aspects.search.homeManager = {pkgs, ...}: {
 		programs.rofi = {
 			enable = true;
 			modes = [

@@ -1,6 +1,9 @@
-{ inputs, den, ... }: 
 {
-	imports = [ inputs.den.flakeModule ];
+	inputs,
+	den,
+	...
+}: {
+	imports = [inputs.den.flakeModule];
 
 	den.schema = {
 		host.home-manager.enable = true;
@@ -15,7 +18,6 @@
 		];
 
 		user = {
-
 		};
 
 		nixos = {
@@ -25,5 +27,4 @@
 		homeManager = {
 		};
 	};
-
 }

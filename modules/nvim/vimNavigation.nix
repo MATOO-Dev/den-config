@@ -7,8 +7,8 @@
 			setupOpts = {
 				default_file_exporer = true;
 				delete_to_trash = true;
-				view_options = { show_hidden = true; };
-				columns = [ "icon" ];
+				view_options = {show_hidden = true;};
+				columns = ["icon"];
 				use_default_keymaps = true;
 				keymaps = {
 					"<bs>" = "actions.parent";

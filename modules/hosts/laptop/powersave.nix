@@ -1,5 +1,5 @@
 {
-	den.aspects.powersave.nixos = { ... }: {
+	den.aspects.powersave.nixos = {...}: {
 		services = {
 			tlp = {
 				enable = false;

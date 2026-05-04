@@ -24,9 +24,5 @@
 		programs.lazygit = {
 			enable = true;
 		};
-
-		programs.zsh.shellAliases = {
-			laz = "lazygit";
-		};
 	};
 }

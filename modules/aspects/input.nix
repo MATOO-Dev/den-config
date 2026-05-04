@@ -2,8 +2,8 @@
 	den.aspects.input = {user, ...}: {
 		nixos = {...}: {
 			services.xserver.xkb = {
-				layout = "us";
-				variant = "";
+				layout = "eu";
+				# variant = "";
 				# gallium/canary does not exist :c
 				# nixos wiki details setting up custom
 				# or just use bazecor/kanata/ZMK

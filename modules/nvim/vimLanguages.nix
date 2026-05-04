@@ -64,8 +64,8 @@
 		languages.nix = {
 			enable = true;
 			extraDiagnostics.enable = true;
-			# format.type = [ "nixfmt" ];
-			format.type = ["alejandra"];
+			format.type = [ "nixfmt" ];
+			# format.type = ["alejandra"];
 		};
 		formatter.conform-nvim.setupOpts.formatters.nixfmt.prepend_args = ["--indent=4"];
 

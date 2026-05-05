@@ -20,15 +20,5 @@
 			mappings.next = null;
 			mappings.previous = null;
 		};
-
-		# appears to break tiny-inline-diagnostic
-		# lazy.plugins."blink.cmp" = {
-		#     package = pkgs.vimPlugins.blink-cmp;
-		#     setupModule = "blink.cmp";
-		#     setupOpts = {
-		#         keymap.preset = "super-tab";
-		#     };
-		#     event = [ "InsertEnter" ];
-		# };
 	};
 }
